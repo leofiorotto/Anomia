@@ -1,0 +1,34 @@
+{
+  "juegos": [
+    {
+      "descripcion": "Seleccione la imagen correcta según las características:",
+      "caracteristicas": ["Hombre", "Adulto", "con barba", "pelo castaño"],
+      "img1": "https://www.elgrafico.com.ar/media/cache/pub_news_details_large/media/i/93/aa/93aa8de92702553e21a87ba0b6d53269557b159a.jpg",
+      "img2": "https://media.istockphoto.com/id/658613000/es/foto/mujer-senior-relajante.jpg?s=612x612&w=0&k=20&c=FhnZ-WxEZCPYmcFbwrGOoATsgSGQlFIuawF11TrmdOA="
+    },
+    {
+      "descripcion": "Seleccione la imagen correcta según las características:",
+      "caracteristicas": ["Mujer", "Adulto", "sin barba", "pelo rubio"],
+      "img1": "https://media.istockphoto.com/id/658613000/es/foto/mujer-senior-relajante.jpg?s=612x612&w=0&k=20&c=FhnZ-WxEZCPYmcFbwrGOoATsgSGQlFIuawF11TrmdOA=",
+      "img2": "https://www.lavanguardia.com/files/content_image_mobile_filter/uploads/2022/03/25/623d4e431e5ae.jpeg"
+    },
+    {
+      "descripcion": "Seleccione la imagen correcta según las características:",
+      "caracteristicas": ["Hombre", "Niño", "sin barba", "pelo negro"],
+      "img1": "https://educacioninicial.mx/wp-content/uploads/2017/06/porque_muerden.jpg",
+      "img2": "https://img.freepik.com/foto-gratis/hombre-adulto-atractivo-cruzar-brazos-sonriendo_176420-18744.jpg"    
+    },
+    {
+      "descripcion": "Seleccione la imagen correcta según las características:",
+      "caracteristicas": ["Computadora", "Niño", "sin barba", "pelo negro"],
+      "img1": "https://educacioninicial.mx/wp-content/uploads/2017/06/porque_muerden.jpg",
+      "img2": "https://img.freepik.com/foto-gratis/hombre-adulto-atractivo-cruzar-brazos-sonriendo_176420-18744.jpg"    
+    },
+    {
+      "descripcion": "Seleccione la imagen correcta según las características:",
+      "caracteristicas": ["Hombre", "Niño", "sin barba", "pelo negro"],
+      "img1": "https://educacioninicial.mx/wp-content/uploads/2017/06/porque_muerden.jpg",
+      "img2": "https://img.freepik.com/foto-gratis/hombre-adulto-atractivo-cruzar-brazos-sonriendo_176420-18744.jpg"    
+    }
+  ]
+}
