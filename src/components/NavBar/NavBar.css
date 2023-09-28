@@ -6,11 +6,17 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #f0f0f0;
+    background-color: #474747;
     color: rgb(0, 0, 0);
 }
 
-.container-nav {
+.logo {
+    width: 5rem;
+    height: auto;
+    cursor: pointer;
+}
+
+/* .container-nav {
     display: flex;
     gap: 2rem;
     font-size: 1.1rem;
@@ -42,9 +48,5 @@ nav button:hover {
 
 .active {
     color: red;
-}
+} */
 
-.logo {
-    width: 8rem;
-    height: auto;
-}

@@ -1,0 +1,48 @@
+.wrapper {
+    margin-top: 8%;
+}
+
+
+.tittle {
+    color:white;
+}
+
+.containter-btn-select {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.btn-select {
+    padding: 2rem;
+    background-color: white;
+    border-radius: 1rem;
+    
+}
+
+.btn-select p {
+    font-size: 2rem;
+    color: black;
+}
+
+.icon-volume {
+    width: 30%;
+    height: auto;
+}
+
+.btn2 {
+    color: green!important;
+    margin: 0;
+    padding: 0;
+}
+
+.btn1 {
+    color: orange!important;
+}
+
+.btn1,
+.btn2 {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+}

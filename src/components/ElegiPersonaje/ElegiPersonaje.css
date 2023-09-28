@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 
 
 .game {
@@ -12,16 +13,17 @@
     display: flex;
     list-style-type: none;
     gap: 1rem;
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 3rem;
-    color: green;
-    padding: 1rem;
+    color: black;
 }
 
 .item-list {
+    background-color: white;
+
     border: 1px solid black;
-    padding: 1rem;
-    border-radius: .3rem;
+    padding: 1.5rem;
+    border-radius: 1rem;
 }
 
 .img-container {
@@ -33,11 +35,14 @@
     width: 350px;
     height: 350px;
     border-radius: 1rem;
+    border: 1px solid black;
 }
 
 .button-container {
     display: flex;
     gap: 1rem;
+    font-size: 1.3rem;
+    font-weight: bold;
 
 }
 
@@ -45,9 +50,8 @@
     width: 100%;
     margin-top: 1rem;
     background-color: rgb(58, 124, 248);
-    color: white;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    color: black;
+    padding: 1.2rem;
 }
 
 .button-help {
@@ -55,8 +59,7 @@
     margin-top: 1rem;
     background-color: yellow;
     color: rgb(0, 0, 0);
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+   padding: 1.2rem;
 }
 
 .button-exit {
@@ -64,7 +67,11 @@
     margin-top: 1rem;
     background-color: red;
     color: rgb(0, 0, 0);
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding: 1.2rem;
 }
 
+.descrpition {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 0;
+}

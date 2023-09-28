@@ -1,0 +1,39 @@
+{
+  "juegos": [
+    {
+      "word1": "Abeja",
+      "word2": "Oveja",
+      "word3": "Avispa",
+      "word4": "Mariposa",
+      "img1": "https://www.nationalgeographic.com.es/medio/2023/05/16/1-istock-1396407304-min_5542ec27_230516163357_2000x1334.jpg"
+    },
+    {
+      "word1": "Espinaca",
+      "word2": "Lechuga",
+      "word3": "Acelga",
+      "word4": "Rucula",
+      "img1": "https://www.semana.com/resizer/dON4DSscwTFLFjTwaZCBSMcM-ZM=/1280x720/smart/filters:format(jpg):quality(80)/cloudfront-us-east-1.images.arcpublishing.com/semana/3REV53527RABTL2YCEI3KJZWAM.jpg"
+    },
+    {
+      "word1": "Perro",
+      "word2": "Gato",
+      "word3": "Cocodrilo",
+      "word4": "Jirafa",
+      "img1": "https://cdn0.bioenciclopedia.com/es/posts/2/2/0/caracteristicas_de_la_jirafa_22_0_600.jpg"
+    },
+    {
+      "word1": "Computadora",
+      "word2": "Televisor",
+      "word3": "Celular",
+      "word4": "Parlante",
+      "img1": "https://test30.tornadostore.com/images/00000000test-003476972984872-1.jpg"
+    },
+    {
+      "word1": "Vaso",
+      "word2": "Plato",
+      "word3": "Taza",
+      "word4": "Sarten",
+      "img1": "https://http2.mlstatic.com/D_NQ_NP_752828-MLA31020920022_062019-O.webp"
+    }
+  ]
+}

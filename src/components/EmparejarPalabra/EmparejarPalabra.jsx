@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import "./EmparejarPalabra.css"
 
 const JuegoDeSeleccion = () => {
   const [juegos, setJuegos] = useState([]);
@@ -38,15 +39,19 @@ const JuegoDeSeleccion = () => {
     <div>
       {currentGame && (
         <div>
-          <h1>{currentGame.descripcion}</h1>
-          <p>Palabra: {currentGame.palabra}</p>
-          <div>
+          <h1 className='descrpition'>{currentGame.descripcion}</h1>
+          <h1 className='palabra'>{currentGame.palabra}</h1>
+          <div className='imagen-container'>
             <img src={currentGame.img1} alt="Imagen 1" />
             <img src={currentGame.img2} alt="Imagen 2" />
             <img src={currentGame.img3} alt="Imagen 3" />
             <img src={currentGame.img4} alt="Imagen 4" />
           </div>
-          <button onClick={handleNextGame}>Siguiente</button>
+          <div className='button-container'>
+              <button className='button-help btnn' onClick={handleNextGame}>💡 Ayuda</button>
+              <button className='button-next btnn' onClick={handleNextGame}> ➡️ Siguiente</button>
+              <button className='button-exit btnn' onClick={handleNextGame}>❌ Salir</button>
+          </div>
         </div>
       )}
     </div>

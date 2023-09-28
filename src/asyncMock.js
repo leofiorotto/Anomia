@@ -9,7 +9,7 @@ const products = [
       id: '2',
       name: "Emparejar sonido",
       category: 'Escuchar y elegir una imagen o palabra',
-      img: "https://www.pngitem.com/pimgs/m/251-2511141_man-listening-listen-sound-audio-male-hearing-illustration.png",
+      img: "https://i.postimg.cc/LsvtChtW/listening.png",
     },
     {
       id: '3',

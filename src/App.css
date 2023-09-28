@@ -1,3 +1,7 @@
+html {
+  background-color: rgb(71, 71, 71)!important;
+}
+
 #root {
   max-width: 100%;
   text-align: center;
