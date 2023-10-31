@@ -1,8 +1,63 @@
 {
   "juegos": [
-
     {
-      "nivel":  1,
+      "nivel": 1,
+      "descripcion": "Seleccione la imagen correcta según las características:",
+      "caracteristicas": ["Computadora", "Color negro", "Teclado", "Pantalla"],
+      "img1": "https://http2.mlstatic.com/D_Q_NP_656861-MLA51229246555_082022-O.webp",
+      "img2": "https://images.fravega.com/f500/39c566fb55f2ba4da1ae9782980fd50e.jpg",
+      "imagenCorrecta": 1
+    },
+    {
+      "nivel": 2,
+      "descripcion": "Seleccione la imagen correcta según las características:",
+      "caracteristicas": ["4 Ruedas", "Motor", "Con puertas", "Con espejos"],
+      "img1": "https://www.heavenimagenes.com/heavencommerce/68ac9d04-8767-4aca-9951-49f2fea1383b/images/v2/SLP/27854_medium.jpg",
+      "img2": "https://www.dsautomobiles.com.ar/content/dam/ds/master/ds-range/ds-4/bbc/s/DS4.jpg",
+      "imagenCorrecta": 2
+    },
+    {
+      "nivel": 3,
+      "descripcion": "Seleccione la imagen correcta según las características:",
+      "caracteristicas": ["Alas", "Aereo", "Altas velocidades", "Vuela"],
+      "img1": "https://static.vecteezy.com/system/resources/previews/014/492/417/non_2x/passenger-airliner-icon-cartoon-style-vector.jpg",
+      "img2": "https://img.freepik.com/vector-premium/ilustracion-barco-ferry-vector-ilustracion-barco-ferry-sobre-fondo-blanco_542607-4450.jpg?w=2000",
+      "imagenCorrecta": 1
+    },
+    {
+      "nivel": 4,
+      "descripcion": "Seleccione la imagen correcta según las características:",
+      "caracteristicas": ["Mas liviano", "Uso cotidiano", "4 puertas", "Negro"],
+      "img1": "https://png.pngtree.com/thumb_back/fw800/background/20231004/pngtree-d-render-of-a-sleek-black-pickup-car-against-a-white-image_13518114.png",
+      "img2": "https://img.directindustry.es/images_di/photo-g/168617-17517287.jpg",
+      "imagenCorrecta": 1
+    },
+    {
+      "nivel": 5,
+      "descripcion": "Seleccione la imagen correcta según las características:",
+      "caracteristicas": ["Con pan", "Tomate", "Lechuga", "Sanguche"],
+      "img1": "https://frioteka.com/assets/productos/wtmk/2650.jpg",
+      "img2": "https://png.pngtree.com/png-clipart/20211201/ourlarge/pngtree-vector-burger-png-image_4045031.png",
+      "imagenCorrecta": 2
+    },
+    {
+      "nivel": 6,
+      "descripcion": "Seleccione la imagen correcta según las características:",
+      "caracteristicas": ["4 Ruedas", "Motor", "Con puertas", "Con espejos"],
+      "img1": "https://www.heavenimagenes.com/heavencommerce/68ac9d04-8767-4aca-9951-49f2fea1383b/images/v2/SLP/27854_medium.jpg",
+      "img2": "https://www.dsautomobiles.com.ar/content/dam/ds/master/ds-range/ds-4/bbc/s/DS4.jpg",
+      "imagenCorrecta": 2
+    },
+    {
+      "nivel": 7,
+      "descripcion": "Seleccione la imagen correcta según las características:",
+      "caracteristicas": ["Yerba", "Bombilla", "De madera", "Mas de 1 objeto"],
+      "img1": "https://noticiasdelmate.com/wp-content/uploads/2022/10/mate-caliente-tradicional-con-bombilla.jpg.webp",
+      "img2": "https://www.semana.com/resizer/_MYBX2lyO2AjTvpuoGB62uHegnY=/1280x720/smart/filters:format(jpg):quality(80)/cloudfront-us-east-1.images.arcpublishing.com/semana/XYR7MYDFHRADVFO7YD3GHG7QHU.jpg",
+      "imagenCorrecta": 1
+    },
+    {
+      "nivel": 8,
       "descripcion": "Seleccione la imagen correcta según las características:",
       "caracteristicas": ["Mujer", "Adulto", "Sin barba", "Pelo rubio"],
       "img1": "https://media.istockphoto.com/id/658613000/es/foto/mujer-senior-relajante.jpg?s=612x612&w=0&k=20&c=FhnZ-WxEZCPYmcFbwrGOoATsgSGQlFIuawF11TrmdOA=",
@@ -10,7 +65,7 @@
       "imagenCorrecta": 1
     },
     {
-      "nivel":  2,
+      "nivel": 9,
       "descripcion": "Seleccione la imagen correcta según las características:",
       "caracteristicas": ["Hombre", "Adulto", "Con barba", "Pelo castaño"],
       "img1": "https://img.freepik.com/foto-gratis/hombre-maduro-estilo-joven-guapo-ambicioso-barba-grandes-ojos-azules-sonriendo-emocionado-satisfecho-pie-traje-moda-sobre-pared-gris-esperando-oportunidad-mostrar-habilidades-sobre-pared-gris_176420-22711.jpg?size=626&ext=jpg",
@@ -18,68 +73,12 @@
       "imagenCorrecta": 1
     },
     {
-      "nivel":  3,
+      "nivel": 10,
       "descripcion": "Seleccione la imagen correcta según las características:",
       "caracteristicas": ["Menor edad", "Niño", "Sin barba", "Pelo negro"],
       "img1": "https://img.freepik.com/foto-gratis/hombre-adulto-atractivo-cruzar-brazos-sonriendo_176420-18744.jpg",
       "img2": "https://educacioninicial.mx/wp-content/uploads/2017/06/porque_muerden.jpg",
-      "imagenCorrecta": 2    
-    },
-    {
-      "nivel":  4,
-      "descripcion": "Seleccione la imagen correcta según las características:",
-      "caracteristicas": ["Computadora", "Color negro", "Teclado", "Pantalla"],
-      "img1": "https://http2.mlstatic.com/D_Q_NP_656861-MLA51229246555_082022-O.webp",
-      "img2": "https://images.fravega.com/f500/39c566fb55f2ba4da1ae9782980fd50e.jpg",
-      "imagenCorrecta": 1       
-    },
-    {
-      "nivel":  5,
-      "descripcion": "Seleccione la imagen correcta según las características:",
-      "caracteristicas": ["4 Ruedas", "Motor", "Con puertas", "Con espejos"],
-      "img1": "https://www.heavenimagenes.com/heavencommerce/68ac9d04-8767-4aca-9951-49f2fea1383b/images/v2/SLP/27854_medium.jpg",
-      "img2": "https://www.dsautomobiles.com.ar/content/dam/ds/master/ds-range/ds-4/bbc/s/DS4.jpg",    
-      "imagenCorrecta": 2 
-    },
-    {
-      "nivel":  6,
-      "descripcion": "Seleccione la imagen correcta según las características:",
-      "caracteristicas": ["Alas", "Aereo", "Altas velocidades", "Vuela"],
-      "img1": "https://static.vecteezy.com/system/resources/previews/014/492/417/non_2x/passenger-airliner-icon-cartoon-style-vector.jpg",
-      "img2": "https://img.freepik.com/vector-premium/ilustracion-barco-ferry-vector-ilustracion-barco-ferry-sobre-fondo-blanco_542607-4450.jpg?w=2000",    
-      "imagenCorrecta": 2 
-    },
-    {
-      "nivel":  7,
-      "descripcion": "Seleccione la imagen correcta según las características:",
-      "caracteristicas": ["Mas liviano", "Uso cotidiano", "4 puertas", "Negro"],
-      "img1": "https://png.pngtree.com/thumb_back/fw800/background/20231004/pngtree-d-render-of-a-sleek-black-pickup-car-against-a-white-image_13518114.png",
-      "img2": "https://img.directindustry.es/images_di/photo-g/168617-17517287.jpg",    
-      "imagenCorrecta": 2 
-    },
-    {
-      "nivel":  8,
-      "descripcion": "Seleccione la imagen correcta según las características:",
-      "caracteristicas": ["Con pan", "Tomate", "Lechuga", "Sanguche"],
-      "img1": "https://frioteka.com/assets/productos/wtmk/2650.jpg",
-      "img2": "https://png.pngtree.com/png-clipart/20211201/ourlarge/pngtree-vector-burger-png-image_4045031.png",    
-      "imagenCorrecta": 2 
-    },
-    {
-      "nivel":  9,
-      "descripcion": "Seleccione la imagen correcta según las características:",
-      "caracteristicas": ["4 Ruedas", "Motor", "Con puertas", "Con espejos"],
-      "img1": "https://www.heavenimagenes.com/heavencommerce/68ac9d04-8767-4aca-9951-49f2fea1383b/images/v2/SLP/27854_medium.jpg",
-      "img2": "https://www.dsautomobiles.com.ar/content/dam/ds/master/ds-range/ds-4/bbc/s/DS4.jpg",    
-      "imagenCorrecta": 2 
-    },
-    {
-      "nivel":  10,
-      "descripcion": "Seleccione la imagen correcta según las características:",
-      "caracteristicas": ["4 Ruedas", "Motor", "Con puertas", "Con espejos"],
-      "img1": "https://www.heavenimagenes.com/heavencommerce/68ac9d04-8767-4aca-9951-49f2fea1383b/images/v2/SLP/27854_medium.jpg",
-      "img2": "https://www.dsautomobiles.com.ar/content/dam/ds/master/ds-range/ds-4/bbc/s/DS4.jpg",    
-      "imagenCorrecta": 2 
+      "imagenCorrecta": 2
     }
   ]
 }
