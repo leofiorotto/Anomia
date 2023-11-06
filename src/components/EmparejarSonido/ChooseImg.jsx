@@ -77,7 +77,7 @@ const JuegoDeSeleccion = () => {
   const currentGame = juegos[currentGameIndex];
 
   const handleAudioClick = () => {
-    const audio = new Audio(`../../src/assets/sound/${currentGame.sound}`);
+    const audio = new Audio(`../../assets/sound/${currentGame.sound}`);
     audio.play();
   };
 
