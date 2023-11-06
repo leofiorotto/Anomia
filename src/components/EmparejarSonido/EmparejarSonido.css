@@ -1,48 +1,69 @@
 .wrapper {
-    margin-top: 8%;
+  margin-top: 8%;
 }
 
-
 .tittle {
-    color:white;
+  color: white;
 }
 
 .containter-btn-select {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 
 .btn-select {
-    padding: 2rem;
-    background-color: white;
-    border-radius: 1rem;
-    
+  padding: 2rem;
+  background-color: white;
+  border-radius: 1rem;
 }
 
 .btn-select p {
-    font-size: 2rem;
-    color: black;
+  font-size: 2rem;
+  color: black;
 }
 
 .icon-volume {
-    width: 30%;
-    height: auto;
+  width: 30%;
+  height: auto;
 }
 
 .btn2 {
-    color: green!important;
-    margin: 0;
-    padding: 0;
+  color: green !important;
+  margin: 0;
+  padding: 0;
 }
 
 .btn1 {
-    color: orange!important;
+  color: orange !important;
 }
 
 .btn1,
 .btn2 {
-    font-size: 1.5rem;
-    margin-top: 0.5rem;
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.caracteristicas {
+  display: flex;
+  gap: 2rem;
+  margin: 2rem;
+}
+
+.caracteristicas button {
+  padding: 3rem;
+  font-size: 3rem;
+}
+
+.button-play {
+  padding: 3rem;
+  font-size: 2rem;
+}
+
+.img-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 2rem;
 }

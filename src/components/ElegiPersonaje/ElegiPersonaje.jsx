@@ -119,7 +119,7 @@ const JuegoDeSeleccion = () => {
                 src={currentGame.img1}
                 className="img-container-1"
                 alt="Imagen 1"
-                onClick={() => handleImageClick(2)}
+                onClick={() => handleImageClick(1)}
               />
             )}
             {showImg2 && (

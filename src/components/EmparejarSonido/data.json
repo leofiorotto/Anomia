@@ -1,0 +1,104 @@
+{
+  "juegos": [
+    {
+      "nivel": 1,
+      "descripcion": "Presione para escuchar y elija la opcion correcta",
+      "sound": "abeja.mp3",
+      "caracteristica1": "Abeja",
+      "caracteristica2": "Perro",
+      "caracteristica3": "Mosca",
+      "caracteristica4": "Adulto",
+      "palabraCorrecta": 1
+    },
+    {
+      "nivel": 2,
+      "descripcion": "Presione para escuchar y elija la opcion correcta",
+      "sound": "abuelo.mp3",
+      "caracteristica1": "Abuelo",
+      "caracteristica2": "Abuela",
+      "caracteristica3": "Padre",
+      "caracteristica4": "Tio",
+      "palabraCorrecta": 1
+    },
+    {
+      "nivel": 3,
+      "descripcion": "Presione para escuchar y elija la opcion correcta",
+      "sound": "acelga.mp3",
+      "caracteristica1": "Espinaca",
+      "caracteristica2": "Lechuga",
+      "caracteristica3": "Acelga",
+      "caracteristica4": "Huelga",
+      "palabraCorrecta": 3
+    },
+    {
+      "nivel": 4,
+      "descripcion": "Presione para escuchar y elija la opcion correcta",
+      "sound": "dentista.mp3",
+      "caracteristica1": "Espacialidad",
+      "caracteristica2": "Dado",
+      "caracteristica3": "Dentista",
+      "caracteristica4": "Cirujano",
+      "palabraCorrecta": 3
+    },
+    {
+      "nivel": 5,
+      "descripcion": "Presione para escuchar y elija la opcion correcta",
+      "sound": "dentifrico.mp3",
+      "caracteristica1": "Dentista",
+      "caracteristica2": "Pasta",
+      "caracteristica3": "Cepillo",
+      "caracteristica4": "Dentifrico",
+      "palabraCorrecta": 4
+    },
+    {
+      "nivel": 6,
+      "descripcion": "Presione para escuchar y elija la opcion correcta",
+      "sound": "chamame.mp3",
+      "caracteristica1": "Vals",
+      "caracteristica2": "Zamba",
+      "caracteristica3": "Chamame",
+      "caracteristica4": "Chacarera",
+      "palabraCorrecta": 3
+    },
+    {
+      "nivel": 7,
+      "descripcion": "Presione para escuchar y elija la opcion correcta",
+      "sound": "computadora.mp3",
+      "caracteristica1": "Laptop",
+      "caracteristica2": "Celular",
+      "caracteristica3": "Compañero",
+      "caracteristica4": "Computadora",
+      "palabraCorrecta": 4
+    },
+    {
+      "nivel": 8,
+      "descripcion": "Presione para escuchar y elija la opcion correcta",
+      "sound": "auto.mp3",
+      "caracteristica1": "Moto",
+      "caracteristica2": "Camion",
+      "caracteristica3": "Auto",
+      "caracteristica4": "Bicicleta",
+      "palabraCorrecta": 3
+    },
+    {
+      "nivel": 9,
+      "descripcion": "Presione para escuchar y elija la opcion correcta",
+      "sound": "arbol.mp3",
+      "caracteristica1": "Abeja",
+      "caracteristica2": "Abuelo",
+      "caracteristica3": "Arbol",
+      "caracteristica4": "Planta",
+      "palabraCorrecta": 3
+    },
+    {
+      "nivel": 10,
+      "descripcion": "Presione para escuchar y elija la opcion correcta",
+      "sound": "pelicula.mp3",
+      "caracteristica1": "Serie",
+      "caracteristica2": "Pelicula",
+      "caracteristica3": "Pelicano",
+      "caracteristica4": "Dibujo",
+      "palabraCorrecta": 2
+    }
+  ]
+}
