@@ -1,10 +1,11 @@
 html {
-  background-color: rgb(46, 46, 46)!important;
+  background-color: rgb(46, 46, 46) !important;
 }
 
 #root {
   max-width: 100%;
   text-align: center;
+  max-height: 100vh;
 }
 
 .logo {

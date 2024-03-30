@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 import "./Item.css";
 import { Link } from "react-router-dom";
 
 const Item = ({ id, name, img, price, category }) => {
   return (
-    <Link to={`/Anomia/detail/${id}`} className="Item-link">
+    <Link to={`/detail/${id}`} className="Item-link">
       <article className="Item">
         <header>
           <h2>{name}</h2>
@@ -14,7 +14,7 @@ const Item = ({ id, name, img, price, category }) => {
           <img src={img} alt={name} />
         </picture>
 
-        <section className='description'>
+        <section className="description">
           <b>{category}</b>
         </section>
       </article>

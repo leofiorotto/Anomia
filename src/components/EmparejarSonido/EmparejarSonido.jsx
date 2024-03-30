@@ -10,14 +10,14 @@ const EmparejarSonido = () => {
     <div className="wrapper">
       <h1 className="tittle">¿Que deseas?</h1>
       <div className="containter-btn-select">
-        <Link to="/Anomia/detail/2/img" className="btn-select">
+        <Link to="/detail/2/img" className="btn-select">
           <img className="icon-volume" src={Volume} alt="" />
           <br />
           <p>
             ESCUCHAR Y ELEGIR UNA <p className="btn1">PALABRA</p>
           </p>
         </Link>
-        <Link to="/Anomia/detail/2/word" className="btn-select">
+        <Link to="/detail/2/word" className="btn-select">
           <img className="icon-volume" src={Volume} alt="" />
           <br />
           <p>

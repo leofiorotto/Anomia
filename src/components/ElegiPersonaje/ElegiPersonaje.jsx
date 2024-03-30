@@ -141,7 +141,7 @@ const JuegoDeSeleccion = () => {
             <button className="button-next" onClick={handleNextGame}>
               ➡️ Siguiente
             </button>
-            <Link className="button-exit" to="/Anomia">
+            <Link className="button-exit" to="/">
               ❌ Salir
             </Link>
           </div>

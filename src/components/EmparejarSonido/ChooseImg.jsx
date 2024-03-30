@@ -3,8 +3,20 @@ import "../ElegiPersonaje/ElegiPersonaje.css";
 import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
 import "./EmparejarSonido.css";
+// import PathSound from "../../assets/sound";
+import Abeja from "../../assets/sound/abeja.mp3";
+import Abuelo from "../../assets/sound/abuelo.mp3";
+import Acelga from "../../assets/sound/acelga.mp3";
+import Arbol from "../../assets/sound/arbol.mp3";
+import Auto from "../../assets/sound/auto.mp3";
+import Dentista from "../../assets/sound/dentista.mp3";
+import Dentifrico from "../../assets/sound/dentifrico.mp3";
+import Chamame from "../../assets/sound/chamame.mp3";
+import Computadora from "../../assets/sound/computadora.mp3";
+import Pelicula from "../../assets/sound/pelicula.mp3";
 
 const JuegoDeSeleccion = () => {
+  const PathSound = "../../assets/sound";
   const [juegos, setJuegos] = useState([]);
   const [currentGameIndex, setCurrentGameIndex] = useState(0);
   const [showWord1, setShowWord1] = useState(true);
@@ -75,10 +87,41 @@ const JuegoDeSeleccion = () => {
   };
 
   const currentGame = juegos[currentGameIndex];
+  console.log("currentGame:", currentGame);
+  console.log("currentGameIndex:", currentGameIndex);
 
   const handleAudioClick = () => {
-    const audio = new Audio(`../../assets/sound/${currentGame.sound}`);
-    audio.play();
+    if (currentGameIndex === 0) {
+      const audio = new Audio(Abeja);
+      audio.play();
+    } else if (currentGameIndex === 1) {
+      const audio = new Audio(Abuelo);
+      audio.play();
+    } else if (currentGameIndex === 2) {
+      const audio = new Audio(Acelga);
+      audio.play();
+    } else if (currentGameIndex === 3) {
+      const audio = new Audio(Dentista);
+      audio.play();
+    } else if (currentGameIndex === 4) {
+      const audio = new Audio(Dentifrico);
+      audio.play();
+    } else if (currentGameIndex === 5) {
+      const audio = new Audio(Chamame);
+      audio.play();
+    } else if (currentGameIndex === 6) {
+      const audio = new Audio(Computadora);
+      audio.play();
+    } else if (currentGameIndex === 7) {
+      const audio = new Audio(Auto);
+      audio.play();
+    } else if (currentGameIndex === 8) {
+      const audio = new Audio(Arbol);
+      audio.play();
+    } else if (currentGameIndex === 9) {
+      const audio = new Audio(Pelicula);
+      audio.play();
+    }
   };
 
   const handleWordClick = (selectedWordIndex) => {
@@ -158,7 +201,7 @@ const JuegoDeSeleccion = () => {
             <button className="button-next" onClick={handleNextGame}>
               ➡️ Siguiente
             </button>
-            <Link className="button-exit" to="/Anomia">
+            <Link className="button-exit" to="/">
               ❌ Salir
             </Link>
             <button className="button-help" onClick={handleRemoveWord}>
