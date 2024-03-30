@@ -1,0 +1,38 @@
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.audio-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out; /* Agrega una transición para suavizar el cambio */
+}
+
+.audio-container:hover {
+  transform: scale(
+    1.1
+  ); /* Cambia la escala al hacer hover para dar una sensación de aumento */
+}
+
+.button-container {
+  display: flex;
+  gap: 1rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+  border: 1px solid blue;
+  border-radius: 2rem;
+  padding: 1rem;
+  background-color: white;
+}
+
+.button-container > * {
+  flex: 1;
+  color: #646cff;
+  cursor: pointer;
+}

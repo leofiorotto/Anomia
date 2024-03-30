@@ -13,7 +13,7 @@
       "descripcion": "Seleccione la imagen correcta según las características:",
       "caracteristicas": ["4 Ruedas", "Motor", "Con puertas", "Con espejos"],
       "img1": "https://www.heavenimagenes.com/heavencommerce/68ac9d04-8767-4aca-9951-49f2fea1383b/images/v2/SLP/27854_medium.jpg",
-      "img2": "https://www.dsautomobiles.com.ar/content/dam/ds/master/ds-range/ds-4/bbc/s/DS4.jpg",
+      "img2": "https://anomia-ps.s3.amazonaws.com/auto.webp",
       "imagenCorrecta": 2
     },
     {

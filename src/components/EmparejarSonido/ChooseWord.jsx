@@ -13,6 +13,11 @@ import Dentifrico from "../../assets/sound/dentifrico.mp3";
 import Chamame from "../../assets/sound/chamame.mp3";
 import Computadora from "../../assets/sound/computadora.mp3";
 import Pelicula from "../../assets/sound/pelicula.mp3";
+import { CirclePlay } from "@styled-icons/fa-regular/CirclePlay";
+import { ArrowCircleRight } from "@styled-icons/evaicons-solid/ArrowCircleRight";
+import { ArrowCircleLeft } from "@styled-icons/evaicons-solid/ArrowCircleLeft";
+import { HelpCircle } from "@styled-icons/boxicons-solid/HelpCircle";
+import { Home } from "@styled-icons/boxicons-regular/Home";
 
 const JuegoDeSeleccion = () => {
   const [juegos, setJuegos] = useState([]);
@@ -48,6 +53,22 @@ const JuegoDeSeleccion = () => {
         title: "Juego terminado",
         text: "¡Has completado todos los niveles!",
         icon: "success",
+      });
+    }
+    setShowWord1(true);
+    setShowWord2(true);
+    setShowWord3(true);
+    setShowWord4(true);
+  };
+
+  const handlePreviousGame = () => {
+    if (currentGameIndex > 0) {
+      setCurrentGameIndex(currentGameIndex - 1);
+    } else {
+      Swal.fire({
+        title: "Inicio del juego",
+        text: "¡Este es el primer nivel!",
+        icon: "info",
       });
     }
     setShowWord1(true);
@@ -155,9 +176,9 @@ const JuegoDeSeleccion = () => {
           <h2 className="level">Nivel: {currentGame.nivel}</h2>
           <h2 className="descrpition">{currentGame.descripcion}</h2>
           <div className="audio-container">
-            <button className="button-play" onClick={handleAudioClick}>
-              ▶️ Reproducir Audio
-            </button>
+            <CirclePlay size={104} onClick={handleAudioClick}>
+              {" Reproducir audio"}
+            </CirclePlay>
           </div>
           <div className="img-container">
             {showWord1 && (
@@ -194,15 +215,18 @@ const JuegoDeSeleccion = () => {
             )}
           </div>
           <div className="button-container">
-            <button className="button-next" onClick={handleNextGame}>
-              ➡️ Siguiente
-            </button>
-            <Link className="button-exit" to="/">
-              ❌ Salir
+            <ArrowCircleLeft
+              size={100}
+              onClick={handlePreviousGame}
+            ></ArrowCircleLeft>
+            <HelpCircle size={100} onClick={handleRemoveWord}></HelpCircle>
+            <ArrowCircleRight
+              size={100}
+              onClick={handleNextGame}
+            ></ArrowCircleRight>
+            <Link to="/">
+              <Home size={100}></Home>
             </Link>
-            <button className="button-help" onClick={handleRemoveWord}>
-              💡 Ayuda
-            </button>
           </div>
         </div>
       )}

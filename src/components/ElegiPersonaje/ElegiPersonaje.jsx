@@ -2,6 +2,11 @@ import React, { useState, useEffect } from "react";
 import "./ElegiPersonaje.css";
 import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
+import { CirclePlay } from "@styled-icons/fa-regular/CirclePlay";
+import { ArrowCircleRight } from "@styled-icons/evaicons-solid/ArrowCircleRight";
+import { ArrowCircleLeft } from "@styled-icons/evaicons-solid/ArrowCircleLeft";
+import { HelpCircle } from "@styled-icons/boxicons-solid/HelpCircle";
+import { Home } from "@styled-icons/boxicons-regular/Home";
 
 const JuegoDeSeleccion = () => {
   const [juegos, setJuegos] = useState([]);
@@ -132,17 +137,17 @@ const JuegoDeSeleccion = () => {
             )}
           </div>
           <div className="button-container">
-            <button className="button-help" onClick={handleRemoveImage}>
-              💡 Ayuda
-            </button>
-            <button className="button-next" onClick={handleBackGame}>
-              ⬅️ Anterior
-            </button>
-            <button className="button-next" onClick={handleNextGame}>
-              ➡️ Siguiente
-            </button>
-            <Link className="button-exit" to="/">
-              ❌ Salir
+            <ArrowCircleLeft
+              size={100}
+              onClick={handleBackGame}
+            ></ArrowCircleLeft>
+            <HelpCircle size={100} onClick={handleRemoveImage}></HelpCircle>
+            <ArrowCircleRight
+              size={100}
+              onClick={handleNextGame}
+            ></ArrowCircleRight>
+            <Link to="/">
+              <Home size={100}></Home>
             </Link>
           </div>
         </div>
