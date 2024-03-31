@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Poppins";
+  src: url(./fonts/Poppins_400.otf) format("opentype");
+}
+
 html {
   background-color: rgb(46, 46, 46) !important;
 }
@@ -6,6 +11,7 @@ html {
   max-width: 100%;
   text-align: center;
   max-height: 100vh;
+  font-family: "Poppins", sans-serif;
 }
 
 .logo {

@@ -1,19 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
 
 .container-words {
-    display: flex;
-    color: black;
-    font-size: 1.5rem;
-    gap: 2rem;
+  display: flex;
+  color: black;
+  font-size: 1.5rem;
+  gap: 2rem;
 }
 
-
 .container-words p {
-    background-color: white;
-    padding: 1rem;
-    border-radius: 1rem;
-    border: 1px solid black;
-    font-family: 'Montserrat', sans-serif;
-
+  background-color: white;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 1px solid black;
 }

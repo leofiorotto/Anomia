@@ -1,6 +1,6 @@
 import classes from "./NavBar.css";
 import "./NavBar.css";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/logos.png";
 import { NavLink, useNavigate } from "react-router-dom";
 
 const NavBar = () => {

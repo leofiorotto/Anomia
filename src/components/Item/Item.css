@@ -1,50 +1,52 @@
 /* Estilos para Item */
 .Item {
-    max-width: 300px;
-    min-height: 400px;
-    border: 1px solid #ccc;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 1rem;
-  }
+  max-width: 300px;
+  min-height: 400px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+}
 
-  .description{
-    display: none;
-  }
+.description {
+  display: none;
+  line-height: 1;
+  margin: auto;
+}
 
-  .Item:hover {
-    transform: scale(1.07);
-    transition: transform 0.5s;
-    cursor: pointer;
-    background-color: rgb(196, 196, 196);
-  }
+.description > * {
+  font-family: Poppins, sans-serif;
+}
 
-  .Item:hover .description {
-    position: absolute;
-    display: block;
-  }
-  
-  .Item img {
-    width: 256px;
-    max-width: 100%;
-    height: auto;
-    margin-top: 1.5rem;
-  }
-  
-  .Item h2 {
-    font-size: 1.2rem;
-    margin: 0;
-  }
-  
-  .Item p {
-    margin: 10px 0;
-  }
-  
-  
- 
+.Item:hover {
+  transform: scale(1.07);
+  transition: transform 0.5s;
+  cursor: pointer;
+  background-color: rgb(196, 196, 196);
+}
 
+.Item:hover .description {
+  position: absolute;
+  display: block;
+}
 
-  section {
-    padding: 1rem;
-  }
+.Item img {
+  width: 256px;
+  max-width: 100%;
+  height: auto;
+  margin-top: 1.5rem;
+}
+
+.Item h2 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.Item p {
+  margin: 10px 0;
+}
+
+section {
+  padding: 0.5rem;
+}

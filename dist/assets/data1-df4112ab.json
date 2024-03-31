@@ -44,10 +44,10 @@
       "nivel": 5,
       "descripcion": "Presione para escuchar y elija la opcion correcta",
       "sound": "dentifrico.mp3",
-      "img1": "https://frioteka.com/assets/productos/wtmk/2650.jpg",
-      "img2": "https://png.pngtree.com/png-clipart/20211201/ourlarge/pngtree-vector-burger-png-image_4045031.png",
-      "img3": "https://frioteka.com/assets/productos/wtmk/2650.jpg",
-      "img4": "https://png.pngtree.com/png-clipart/20211201/ourlarge/pngtree-vector-burger-png-image_4045031.png",
+      "img1": "https://anomia-ps.s3.amazonaws.com/pizza.png",
+      "img2": "https://anomia-ps.s3.amazonaws.com/hambur.webp",
+      "img3": "https://anomia-ps.s3.amazonaws.com/pizza.png",
+      "img4": "https://anomia-ps.s3.amazonaws.com/hambur.webp",
       "palabraCorrecta": 4
     },
     {

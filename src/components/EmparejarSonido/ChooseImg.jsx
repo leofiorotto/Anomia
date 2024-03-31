@@ -176,7 +176,7 @@ const JuegoDeSeleccion = () => {
   return (
     <div className="container">
       {currentGame && (
-        <div className="game">
+        <div className="game game-sound">
           <h2 className="level">Nivel: {currentGame.nivel}</h2>
           <h2 className="descrpition">{currentGame.descripcion}</h2>
           <div className="audio-container">

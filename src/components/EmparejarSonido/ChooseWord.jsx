@@ -3,16 +3,16 @@ import "../ElegiPersonaje/ElegiPersonaje.css";
 import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
 import "./EmparejarSonido.css";
-import Abeja from "../../assets/sound/abeja.mp3";
-import Abuelo from "../../assets/sound/abuelo.mp3";
-import Acelga from "../../assets/sound/acelga.mp3";
-import Arbol from "../../assets/sound/arbol.mp3";
-import Auto from "../../assets/sound/auto.mp3";
-import Dentista from "../../assets/sound/dentista.mp3";
-import Dentifrico from "../../assets/sound/dentifrico.mp3";
-import Chamame from "../../assets/sound/chamame.mp3";
-import Computadora from "../../assets/sound/computadora.mp3";
-import Pelicula from "../../assets/sound/pelicula.mp3";
+import Pantalon from "../../assets/sound/pantalon.mp3";
+import Zapatilla from "../../assets/sound/zapatilla.mp3";
+import Cama from "../../assets/sound/cama.mp3";
+import Cuchara from "../../assets/sound/cuchara.mp3";
+import Tenis from "../../assets/sound/tenis.mp3";
+import Lapicera from "../../assets/sound/lapicera.mp3";
+import Aire from "../../assets/sound/aire.mp3";
+import Amaca from "../../assets/sound/amaca.mp3";
+import Copa from "../../assets/sound/copa.mp3";
+import Chocolate from "../../assets/sound/chocolate.mp3";
 import { CirclePlay } from "@styled-icons/fa-regular/CirclePlay";
 import { ArrowCircleRight } from "@styled-icons/evaicons-solid/ArrowCircleRight";
 import { ArrowCircleLeft } from "@styled-icons/evaicons-solid/ArrowCircleLeft";
@@ -109,34 +109,34 @@ const JuegoDeSeleccion = () => {
 
   const handleAudioClick = () => {
     if (currentGameIndex === 0) {
-      const audio = new Audio(Computadora);
+      const audio = new Audio(Pantalon);
       audio.play();
     } else if (currentGameIndex === 1) {
-      const audio = new Audio(Bicicleta);
+      const audio = new Audio(Zapatilla);
       audio.play();
     } else if (currentGameIndex === 2) {
-      const audio = new Audio(Avion);
+      const audio = new Audio(Cama);
       audio.play();
     } else if (currentGameIndex === 3) {
-      const audio = new Audio(Dentista);
+      const audio = new Audio(Cuchara);
       audio.play();
     } else if (currentGameIndex === 4) {
-      const audio = new Audio(Dentifrico);
+      const audio = new Audio(Tenis);
       audio.play();
     } else if (currentGameIndex === 5) {
-      const audio = new Audio(Chamame);
+      const audio = new Audio(Lapicera);
       audio.play();
     } else if (currentGameIndex === 6) {
-      const audio = new Audio(Computadora);
+      const audio = new Audio(Aire);
       audio.play();
     } else if (currentGameIndex === 7) {
-      const audio = new Audio(Auto);
+      const audio = new Audio(Amaca);
       audio.play();
     } else if (currentGameIndex === 8) {
-      const audio = new Audio(Arbol);
+      const audio = new Audio(Copa);
       audio.play();
     } else if (currentGameIndex === 9) {
-      const audio = new Audio(Pelicula);
+      const audio = new Audio(Chocolate);
       audio.play();
     }
   };
@@ -172,7 +172,7 @@ const JuegoDeSeleccion = () => {
   return (
     <div className="container">
       {currentGame && (
-        <div className="game">
+        <div className="game game-sound">
           <h2 className="level">Nivel: {currentGame.nivel}</h2>
           <h2 className="descrpition">{currentGame.descripcion}</h2>
           <div className="audio-container">

@@ -35,9 +35,9 @@
     {
       "nivel": 5,
       "descripcion": "Seleccione la imagen correcta según las características:",
-      "caracteristicas": ["Sanguche"],
-      "img1": "https://frioteka.com/assets/productos/wtmk/2650.jpg",
-      "img2": "https://png.pngtree.com/png-clipart/20211201/ourlarge/pngtree-vector-burger-png-image_4045031.png",
+      "caracteristicas": ["Hamburguesa"],
+      "img1": "https://anomia-ps.s3.amazonaws.com/pizza.png",
+      "img2": "https://anomia-ps.s3.amazonaws.com/hambur.webp",
       "imagenCorrecta": 2
     },
     {
@@ -77,7 +77,7 @@
       "descripcion": "Seleccione la imagen correcta según las características:",
       "caracteristicas": ["Niño"],
       "img1": "https://img.freepik.com/foto-gratis/hombre-adulto-atractivo-cruzar-brazos-sonriendo_176420-18744.jpg",
-      "img2": "https://educacioninicial.mx/wp-content/uploads/2017/06/porque_muerden.jpg",
+      "img2": "https://f.fcdn.app/imgs/0435f0/www.bas.com.uy/bas/c568/webp/catalogo/W24KB02_Crudo_1/600x900/remera-manga-corta-superpuesta-crudo.jpg",
       "imagenCorrecta": 2
     }
   ]

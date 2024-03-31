@@ -71,6 +71,8 @@ const UnoSobra = () => {
     <div className="container">
       {currentGame && (
         <div className="game">
+          <h2 className="level">Nivel: {currentGame.nivel}</h2>
+
           <h1 className="tittle">
             Seleccione la imagen que no pertenece al grupo
           </h1>

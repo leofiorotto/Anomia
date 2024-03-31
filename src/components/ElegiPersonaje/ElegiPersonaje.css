@@ -6,13 +6,13 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 0.5rem;
 }
 
 .list {
   display: flex;
   list-style-type: none;
   gap: 1rem;
-  font-family: "Montserrat", sans-serif;
   font-size: 3rem;
   color: black;
 }
@@ -74,14 +74,12 @@
 
 .descrpition {
   color: #fff;
-  font-family: "Montserrat", sans-serif;
   margin-top: 0;
   font-size: 2rem;
 }
 
 .level {
   margin: 0;
-  font-family: "Bebas Neue", cursive;
   font-size: 3rem;
   color: #a294e4;
 }

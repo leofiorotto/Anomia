@@ -36,8 +36,8 @@
       "nivel": 5,
       "descripcion": "Seleccione la imagen correcta según las características:",
       "caracteristicas": ["Con pan", "Tomate", "Lechuga", "Sanguche"],
-      "img1": "https://frioteka.com/assets/productos/wtmk/2650.jpg",
-      "img2": "https://png.pngtree.com/png-clipart/20211201/ourlarge/pngtree-vector-burger-png-image_4045031.png",
+      "img1": "https://anomia-ps.s3.amazonaws.com/pizza.png",
+      "img2": "https://anomia-ps.s3.amazonaws.com/hambur.webp",
       "imagenCorrecta": 2
     },
     {
