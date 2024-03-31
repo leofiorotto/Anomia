@@ -1,0 +1,103 @@
+{
+  "juegos": [
+    {
+      "nivel": 1,
+      "descripcion": "Presione para escuchar y elija la opcion correcta",
+      "sound": "abeja.mp3",
+      "img1": "https://www.distritomoda.com.ar/sites/default/files/styles/producto_interior/public/imagenes/buzo-algodon-friza-gris-talle-xl_1626722318.jpg?itok=vDXm07V9",
+      "img2": "https://biffas.com.ar/wp-content/uploads/2020/06/remera-denver-gris.jpg",
+      "img3": "https://www.aquadelta.com.ar/img/articulos/2023/04/pantalon_trekking_alaska_jungla_mujer_imagen7.jpg",
+      "img4": "https://anomia-ps.s3.amazonaws.com/campera.webp",
+      "palabraCorrecta": 3
+    },
+    {
+      "nivel": 2,
+      "descripcion": "Presione para escuchar y elija la opcion correcta",
+      "sound": "abuelo.mp3",
+      "img1": "https://anomia-ps.s3.amazonaws.com/botas.avif",
+      "img2": "https://anomia-ps.s3.amazonaws.com/ojotas.avif",
+      "img3": "https://anomia-ps.s3.amazonaws.com/zapato.avif",
+      "img4": "https://anomia-ps.s3.amazonaws.com/zapatillas.png",
+      "palabraCorrecta": 4
+    },
+    {
+      "nivel": 3,
+      "descripcion": "Presione para escuchar y elija la opcion correcta",
+      "sound": "acelga.mp3",
+      "img1": "https://anomia-ps.s3.amazonaws.com/silla.png",
+      "img2": "https://anomia-ps.s3.amazonaws.com/sillon.png",
+      "img3": "https://anomia-ps.s3.amazonaws.com/cama.png",
+      "img4": "https://anomia-ps.s3.amazonaws.com/mesa.webp",
+      "palabraCorrecta": 3
+    },
+    {
+      "nivel": 4,
+      "descripcion": "Presione para escuchar y elija la opcion correcta",
+      "sound": "dentista.mp3",
+      "img1": "https://anomia-ps.s3.amazonaws.com/tenedor.avif",
+      "img2": "https://anomia-ps.s3.amazonaws.com/espatula.avif",
+      "img3": "https://anomia-ps.s3.amazonaws.com/cuchara.avif",
+      "img4": "https://anomia-ps.s3.amazonaws.com/cuchillo.avif",
+      "palabraCorrecta": 3
+    },
+    {
+      "nivel": 5,
+      "descripcion": "Presione para escuchar y elija la opcion correcta",
+      "sound": "dentifrico.mp3",
+      "img1": "https://anomia-ps.s3.amazonaws.com/tenis.avif",
+      "img2": "https://anomia-ps.s3.amazonaws.com/rugby.avif",
+      "img3": "https://anomia-ps.s3.amazonaws.com/golf.avif",
+      "img4": "https://anomia-ps.s3.amazonaws.com/futbol.avif",
+      "palabraCorrecta": 1
+    },
+    {
+      "nivel": 6,
+      "descripcion": "Presione para escuchar y elija la opcion correcta",
+      "sound": "chamame.mp3",
+      "img1": "https://anomia-ps.s3.amazonaws.com/lapiz.webp",
+      "img2": "https://anomia-ps.s3.amazonaws.com/lapicera.webp",
+      "img3": "https://anomia-ps.s3.amazonaws.com/sacapuntas.webp",
+      "img4": "https://anomia-ps.s3.amazonaws.com/fibron.webp",
+      "palabraCorrecta": 2
+    },
+    {
+      "nivel": 7,
+      "descripcion": "Presione para escuchar y elija la opcion correcta",
+      "sound": "computadora.mp3",
+      "img1": "https://anomia-ps.s3.amazonaws.com/aireAcondicionado.webp",
+      "img2": "https://anomia-ps.s3.amazonaws.com/caloventor.webp",
+      "img3": "https://anomia-ps.s3.amazonaws.com/ventilador.webp",
+      "img4": "https://anomia-ps.s3.amazonaws.com/calefactor.webp",
+      "palabraCorrecta": 1
+    },
+    {
+      "nivel": 8,
+      "descripcion": "Presione para escuchar y elija la opcion correcta",
+      "sound": "auto.mp3",
+      "img1": "https://anomia-ps.s3.amazonaws.com/calesita.webp",
+      "img2": "https://anomia-ps.s3.amazonaws.com/amaca.webp",
+      "img3": "https://anomia-ps.s3.amazonaws.com/tobogan.webp",
+      "img4": "https://anomia-ps.s3.amazonaws.com/subebaja.webp",
+      "palabraCorrecta": 2
+    },
+    {
+      "nivel": 9,
+      "descripcion": "Presione para escuchar y elija la opcion correcta",
+      "img1": "https://anomia-ps.s3.amazonaws.com/taza.webp",
+      "img2": "https://anomia-ps.s3.amazonaws.com/vaso.webp",
+      "img3": "https://anomia-ps.s3.amazonaws.com/copa.webp",
+      "img4": "https://anomia-ps.s3.amazonaws.com/jarra.webp",
+      "palabraCorrecta": 3
+    },
+    {
+      "nivel": 10,
+      "descripcion": "Presione para escuchar y elija la opcion correcta",
+      "sound": "pelicula.mp3",
+      "img1": "https://anomia-ps.s3.amazonaws.com/alfajor.webp",
+      "img2": "https://anomia-ps.s3.amazonaws.com/caramelo.webp",
+      "img3": "https://anomia-ps.s3.amazonaws.com/chocolate.webp",
+      "img4": "https://anomia-ps.s3.amazonaws.com/chupetin.webp",
+      "palabraCorrecta": 3
+    }
+  ]
+}
