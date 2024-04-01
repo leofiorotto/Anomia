@@ -37,7 +37,6 @@ const UnoSobra = () => {
     if (currentGameIndex < juegos.length - 1) {
       setCurrentGameIndex(currentGameIndex + 1);
     } else {
-      // Has llegado al final de los juegos, puedes manejar esto como desees
       Swal.fire({
         title: "Juego terminado",
         text: "¡Has completado todos los niveles!",
@@ -51,10 +50,20 @@ const UnoSobra = () => {
         },
       });
     }
-    setShowImg1(true);
-    setShowImg2(true);
-    setShowImg3(true);
-    setShowImg4(true);
+
+    // Agregar clase CSS para animación de salida
+    setShowImg1(false);
+    setShowImg2(false);
+    setShowImg3(false);
+    setShowImg4(false);
+
+    // Esperar un momento antes de mostrar las nuevas imágenes
+    setTimeout(() => {
+      setShowImg1(true);
+      setShowImg2(true);
+      setShowImg3(true);
+      setShowImg4(true);
+    }, 100); // Ajusta el tiempo según la duración de tu animación en CSS
   };
 
   const handlePreviousGame = () => {
@@ -162,15 +171,23 @@ const UnoSobra = () => {
             {showImg1 && (
               <img
                 src={currentGame.img1}
-                className="img-container-2"
-                alt="Imagen 2"
+                className={
+                  showImg1
+                    ? "img-container-2 slide-out-left"
+                    : "img-container-2"
+                }
+                alt="Imagen 1"
                 onClick={() => handleImageClick(1)}
               />
             )}
             {showImg2 && (
               <img
                 src={currentGame.img2}
-                className="img-container-2"
+                className={
+                  showImg2
+                    ? "img-container-2 slide-out-left"
+                    : "img-container-2"
+                }
                 alt="Imagen 2"
                 onClick={() => handleImageClick(2)}
               />
@@ -178,20 +195,29 @@ const UnoSobra = () => {
             {showImg3 && (
               <img
                 src={currentGame.img3}
-                className="img-container-2"
-                alt="Imagen 2"
+                className={
+                  showImg3
+                    ? "img-container-2 slide-out-left"
+                    : "img-container-2"
+                }
+                alt="Imagen 3"
                 onClick={() => handleImageClick(3)}
               />
             )}
             {showImg4 && (
               <img
                 src={currentGame.img4}
-                className="img-container-2"
-                alt="Imagen 2"
+                className={
+                  showImg4
+                    ? "img-container-2 slide-out-left"
+                    : "img-container-2"
+                }
+                alt="Imagen 4"
                 onClick={() => handleImageClick(4)}
               />
             )}
           </div>
+
           <div className="button-container">
             <ArrowCircleLeft
               size={100}

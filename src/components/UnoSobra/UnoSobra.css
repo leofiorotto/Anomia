@@ -1,0 +1,30 @@
+@keyframes slideOutLeft {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-10%);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(120%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+.img-container img {
+  animation-duration: 0.5s; /* Ajusta la duración de la animación según tu preferencia */
+  animation-fill-mode: forwards;
+}
+
+.img-container img.slide-out-left {
+  animation-name: slideOutLeft;
+}
+
+.img-container img.slide-in-right {
+  animation-name: slideInRight;
+}
