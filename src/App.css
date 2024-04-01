@@ -49,3 +49,31 @@ html {
 .read-the-docs {
   color: #888;
 }
+
+.my-popup {
+  border-radius: 3rem;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  gap: 1rem;
+
+  /* Aquí puedes agregar más estilos personalizados */
+}
+
+.my-title {
+  /* Estilos perso
+  nalizados para el título */
+  font-family: "Poppins", sans-serif;
+}
+
+.my-content {
+  /* Estilos personalizados para el contenido */
+  font-family: "Poppins", sans-serif;
+}
+
+.my-confirm-button {
+  /* Estilos personalizados para el botón de confirmación */
+  font-family: "Poppins", sans-serif;
+}

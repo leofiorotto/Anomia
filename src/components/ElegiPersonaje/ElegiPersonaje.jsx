@@ -41,6 +41,13 @@ const JuegoDeSeleccion = () => {
         title: "Juego terminado",
         text: "¡Has completado todos los niveles!",
         icon: "success",
+        customClass: {
+          popup: "my-popup",
+          title: "my-title",
+          content: "my-content",
+          confirmButton: "my-confirm-button",
+          cancelButton: "my-cancel-button",
+        },
       });
     }
 
@@ -92,6 +99,13 @@ const JuegoDeSeleccion = () => {
         showCancelButton: true,
         confirmButtonText: "Siguiente",
         cancelButtonText: "Cerrar",
+        customClass: {
+          popup: "my-popup",
+          title: "my-title",
+          content: "my-content",
+          confirmButton: "my-confirm-button",
+          cancelButton: "my-cancel-button",
+        },
         preConfirm: () => {
           handleNextGame();
         },
@@ -101,6 +115,13 @@ const JuegoDeSeleccion = () => {
         title: "Incorrecto",
         text: "¡Has seleccionado la imagen incorrecta!",
         icon: "error",
+        customClass: {
+          popup: "my-popup",
+          title: "my-title",
+          content: "my-content",
+          confirmButton: "my-confirm-button",
+          cancelButton: "my-cancel-button",
+        },
       });
     }
   };

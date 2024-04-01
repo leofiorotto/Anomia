@@ -55,6 +55,13 @@ const JuegoDeSeleccion = () => {
         title: "Juego terminado",
         text: "¡Has completado todos los niveles!",
         icon: "success",
+        customClass: {
+          popup: "my-popup",
+          title: "my-title",
+          content: "my-content",
+          confirmButton: "my-confirm-button",
+          cancelButton: "my-cancel-button",
+        },
       });
     }
     setShowWord1(true);
@@ -71,6 +78,13 @@ const JuegoDeSeleccion = () => {
         title: "Inicio del juego",
         text: "¡Este es el primer nivel!",
         icon: "info",
+        customClass: {
+          popup: "my-popup",
+          title: "my-title",
+          content: "my-content",
+          confirmButton: "my-confirm-button",
+          cancelButton: "my-cancel-button",
+        },
       });
     }
     setShowWord1(true);
@@ -160,6 +174,13 @@ const JuegoDeSeleccion = () => {
         showCancelButton: true,
         confirmButtonText: "Siguiente",
         cancelButtonText: "Cerrar",
+        customClass: {
+          popup: "my-popup",
+          title: "my-title",
+          content: "my-content",
+          confirmButton: "my-confirm-button",
+          cancelButton: "my-cancel-button",
+        },
         preConfirm: () => {
           handleNextGame();
         },
@@ -169,6 +190,13 @@ const JuegoDeSeleccion = () => {
         title: "Incorrecto",
         text: "¡Has seleccionado la palabra incorrecta!",
         icon: "error",
+        customClass: {
+          popup: "my-popup",
+          title: "my-title",
+          content: "my-content",
+          confirmButton: "my-confirm-button",
+          cancelButton: "my-cancel-button",
+        },
       });
     }
   };
