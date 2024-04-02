@@ -135,3 +135,29 @@
     height: 200px;
   }
 }
+
+@keyframes slideOutLeft {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-10%);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(120%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+.img-container img.slide-out-left {
+  animation-name: slideOutLeft;
+}
+
+.img-container img.slide-in-right {
+  animation-name: slideInRight;
+}

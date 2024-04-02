@@ -62,10 +62,17 @@ const JuegoDeSeleccion = () => {
         },
       });
     }
-    setShowWord1(true);
-    setShowWord2(true);
-    setShowWord3(true);
-    setShowWord4(true);
+    setShowWord1(false);
+    setShowWord2(false);
+    setShowWord3(false);
+    setShowWord4(false);
+
+    setTimeout(() => {
+      setShowWord1(true);
+      setShowWord2(true);
+      setShowWord3(true);
+      setShowWord4(true);
+    }, 30);
   };
 
   const handlePreviousGame = () => {
@@ -212,7 +219,11 @@ const JuegoDeSeleccion = () => {
             {showWord1 && (
               <img
                 src={currentGame.img1}
-                className="img-container-2"
+                className={
+                  showWord1
+                    ? "img-container-2 slide-out-left"
+                    : "img-container-2"
+                }
                 alt="Imagen 2"
                 onClick={() => handleImageClick(1)}
               />
@@ -220,7 +231,11 @@ const JuegoDeSeleccion = () => {
             {showWord2 && (
               <img
                 src={currentGame.img2}
-                className="img-container-2"
+                className={
+                  showWord2
+                    ? "img-container-2 slide-out-left"
+                    : "img-container-2"
+                }
                 alt="Imagen 2"
                 onClick={() => handleImageClick(2)}
               />
@@ -228,7 +243,11 @@ const JuegoDeSeleccion = () => {
             {showWord3 && (
               <img
                 src={currentGame.img3}
-                className="img-container-2"
+                className={
+                  showWord3
+                    ? "img-container-2 slide-out-left"
+                    : "img-container-2"
+                }
                 alt="Imagen 2"
                 onClick={() => handleImageClick(3)}
               />
@@ -236,7 +255,11 @@ const JuegoDeSeleccion = () => {
             {showWord4 && (
               <img
                 src={currentGame.img4}
-                className="img-container-2"
+                className={
+                  showWord4
+                    ? "img-container-2 slide-out-left"
+                    : "img-container-2"
+                }
                 alt="Imagen 2"
                 onClick={() => handleImageClick(4)}
               />

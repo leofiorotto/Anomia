@@ -51,19 +51,17 @@ const UnoSobra = () => {
       });
     }
 
-    // Agregar clase CSS para animación de salida
     setShowImg1(false);
     setShowImg2(false);
     setShowImg3(false);
     setShowImg4(false);
 
-    // Esperar un momento antes de mostrar las nuevas imágenes
     setTimeout(() => {
       setShowImg1(true);
       setShowImg2(true);
       setShowImg3(true);
       setShowImg4(true);
-    }, 100); // Ajusta el tiempo según la duración de tu animación en CSS
+    }, 20);
   };
 
   const handlePreviousGame = () => {

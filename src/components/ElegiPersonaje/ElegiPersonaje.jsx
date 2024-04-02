@@ -50,17 +50,13 @@ const JuegoDeSeleccion = () => {
         },
       });
     }
+    setShowImg1(false);
+    setShowImg2(false);
 
-    if (setShowImg2 === true) {
-      setShowImg2(false);
-    } else {
-      setShowImg2(true);
-    }
-    if (setShowImg1 === true) {
-      setShowImg1(false);
-    } else {
+    setTimeout(() => {
       setShowImg1(true);
-    }
+      setShowImg2(true);
+    }, 10);
   };
 
   const handleBackGame = () => {
@@ -143,7 +139,11 @@ const JuegoDeSeleccion = () => {
             {showImg1 && (
               <img
                 src={currentGame.img1}
-                className="img-container-1"
+                className={
+                  showImg1
+                    ? "img-container-2 slide-out-left"
+                    : "img-container-2"
+                }
                 alt="Imagen 1"
                 onClick={() => handleImageClick(1)}
               />
@@ -151,7 +151,11 @@ const JuegoDeSeleccion = () => {
             {showImg2 && (
               <img
                 src={currentGame.img2}
-                className="img-container-2"
+                className={
+                  showImg2
+                    ? "img-container-2 slide-out-left"
+                    : "img-container-2"
+                }
                 alt="Imagen 2"
                 onClick={() => handleImageClick(2)}
               />
