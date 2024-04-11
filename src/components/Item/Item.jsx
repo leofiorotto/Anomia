@@ -6,17 +6,21 @@ const Item = ({ id, name, img, price, category }) => {
   return (
     <Link to={`/detail/${id}`} className="Item-link">
       <article className="Item">
-        <header>
-          <h2>{name}</h2>
-        </header>
-
-        <picture>
-          <img src={img} alt={name} />
-        </picture>
-
-        <section className="description">
-          <b>{category}</b>
-        </section>
+        <div className="div1">
+          <header>
+            <h2 className="tittle_item">{name}</h2>
+          </header>
+        </div>
+        <div className="div2">
+          <picture>
+            <img src={img} alt={name} />
+          </picture>
+        </div>
+        <div>
+          <section className="description">
+            <b>{category}</b>
+          </section>
+        </div>
       </article>
     </Link>
   );

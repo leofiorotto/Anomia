@@ -144,6 +144,7 @@ const JuegoDeSeleccion = () => {
                     ? "img-container-2 slide-out-left"
                     : "img-container-2"
                 }
+                id="imgg"
                 alt="Imagen 1"
                 onClick={() => handleImageClick(1)}
               />
@@ -156,6 +157,7 @@ const JuegoDeSeleccion = () => {
                     ? "img-container-2 slide-out-left"
                     : "img-container-2"
                 }
+                id="imgg"
                 alt="Imagen 2"
                 onClick={() => handleImageClick(2)}
               />

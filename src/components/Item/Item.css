@@ -1,7 +1,7 @@
 /* Estilos para Item */
 .Item {
-  max-width: 300px;
-  min-height: 400px;
+  width: 13vw;
+  min-height: 50vh;
   border: 1px solid #ccc;
   padding: 20px;
   background-color: #fff;
@@ -11,6 +11,24 @@
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   /* Agregar una transición para el efecto de "hover" */
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.tittle_item {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  margin: 0;
+  min-height: 50px;
+  line-height: 1;
+}
+
+.Item > .div2 {
+
+  margin: 10% auto;
+
 }
 
 /* Agregar un efecto de "hover" */
@@ -21,7 +39,10 @@
 .description {
   display: none;
   line-height: 1;
+  text-align: center;
+  font-size: 15px;
   margin: auto;
+  width: auto;
 }
 
 .description > * {
@@ -36,12 +57,11 @@
 }
 
 .Item:hover .description {
-  position: absolute;
-  display: block;
+  display: flex;
 }
 
 .Item img {
-  width: 256px;
+  width: 130px;
   max-width: 100%;
   height: auto;
   margin-top: 1.5rem;
@@ -58,4 +78,18 @@
 
 section {
   padding: 0.5rem;
+}
+
+
+@media screen and (min-width: 1350px) {
+  .Item img {
+    width: 230px;
+  }
+
+  .description {
+
+    font-size: 20px;
+
+  }
+  
 }

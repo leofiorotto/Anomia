@@ -13,6 +13,23 @@
   -webkit-text-size-adjust: 100%;
 }
 
+/* Para navegadores basados en Webkit (Chrome, Safari) */
+:root::-webkit-scrollbar {
+  width: 8px;
+  background-color: #a294e4;
+
+}
+
+:root::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+:root::-webkit-scrollbar-thumb {
+  background-color: #a294e4;
+  border-radius: 20px;
+  border: transparent;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
