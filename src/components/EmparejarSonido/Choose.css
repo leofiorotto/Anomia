@@ -62,3 +62,36 @@
 .img-container img.slide-in-right {
   animation-name: slideInRight;
 }
+
+@media screen and (max-width: 1350px) {
+  .game-sound {
+    flex-direction: column;
+  }
+
+  .audio-container {
+    margin: 0;
+    height: 70px;
+    width: 70px;
+  }
+
+  .button-container > * {
+    flex: 1;
+  }
+
+  .game-sound {
+    gap: 1rem;
+  }
+
+  .img-container img.slide-out-left {
+    width: 180px;
+    height: 180px;
+    margin: 0;
+  }
+  
+  .img-container img.slide-in-right {
+    width: 180px;
+    height: 180px;
+  }
+  
+  
+}

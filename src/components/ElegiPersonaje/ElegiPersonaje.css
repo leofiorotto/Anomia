@@ -6,10 +6,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 0.5rem;
+    gap: 1.5rem;
     min-height: 90vh;
     overflow-y: auto;
-    padding-bottom: 50px;
 }
 
 
@@ -168,7 +167,7 @@
   animation-name: slideInRight;
 }
 
-@media screen and (max-width: 1400px){
+@media screen and (max-width: 1350px){
   .item-list {
     font-size: 1rem;
     line-height: 1;
@@ -204,6 +203,11 @@
 
   .level {
     font-size: 2rem;
+  }
+
+  .img-container img {
+    width: 180px;
+    height: 180px;
   }
 
 

@@ -13,3 +13,9 @@
   border-radius: 1rem;
   border: 1px solid black;
 }
+
+@media screen and (max-width: 1350px) {
+  .caracteristicas-palabra-aislada {
+    margin: 0px;
+  }
+}

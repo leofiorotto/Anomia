@@ -19,3 +19,11 @@
   font-size: 0.8rem;
   text-align: center;
 }
+
+@media screen and (max-width: 1350px){
+  .footer {
+   display: none;
+  }
+ 
+  
+}

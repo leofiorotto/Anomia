@@ -42,3 +42,21 @@
 .img-container img.slide-in-right {
   animation-name: slideInRight;
 }
+
+@media screen and (max-width: 1350px) {
+
+  .img-container {
+    min-height: 200px;
+  }
+  .tittle {
+    font-size: 2rem;
+  }
+
+
+  .img-container img {
+    width: 180px;
+    height: 180px;
+  }
+
+  
+}

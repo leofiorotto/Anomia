@@ -55,7 +55,6 @@
   padding: 3rem;
   font-size: 3rem;
   padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
 }
 
 .button-play {
@@ -68,4 +67,23 @@
   flex-wrap: wrap;
   gap: 1rem;
   margin: 2rem;
+}
+
+@media screen and (max-width: 1350px) {
+  .btn-select {
+    padding: 10px;
+  }
+
+  .caracteristicas button {
+    padding: 1rem;
+    font-size: 2rem;
+    padding-top: 1.5rem;
+  }
+  .containter-btn-select {
+    gap: 0.5rem;
+  }
+
+  .caracteristicas {
+    margin: 1rem;
+  }
 }

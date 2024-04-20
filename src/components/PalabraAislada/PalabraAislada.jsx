@@ -173,7 +173,7 @@ const PalabraAislada = () => {
           <div className="img-container">
             <img src={currentGame.img1} alt="Imagen 1" />
           </div>
-          <div className="caracteristicas">
+          <div className="caracteristicas caracteristicas-palabra-aislada">
             {showWord1 && (
               <button
                 className="button-word"
