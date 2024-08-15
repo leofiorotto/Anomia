@@ -28,7 +28,6 @@ const SettingsModal = ({
               &times;
             </span>
             <h2>Configuración</h2>
-
             <div className="containerHelp">
               <h3
                 style={{

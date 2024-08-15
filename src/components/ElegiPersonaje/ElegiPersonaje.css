@@ -209,7 +209,8 @@
     width: 180px;
     height: 180px;
   }
+}
 
-
-
+.img-container-2:hover {
+  border: 2px solid black;
 }

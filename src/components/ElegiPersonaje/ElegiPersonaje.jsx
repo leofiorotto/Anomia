@@ -9,14 +9,13 @@ import { Home } from "@styled-icons/boxicons-regular/Home";
 import Correcto from "../../assets/sound/correcto.mp3";
 import Incorrecto from "../../assets/sound/incorrecto.mp3";
 
-const JuegoDeSeleccion = ({toggleStates, setToggleStates}) => {
+const JuegoDeSeleccion = ({ toggleStates, setToggleStates }) => {
   const [juegos, setJuegos] = useState([]);
   const [currentGameIndex, setCurrentGameIndex] = useState(0);
   const [showImg2, setShowImg2] = useState(true); // Nuevo estado para controlar si mostrar img2
   const [showImg1, setShowImg1] = useState(true);
 
   console.log(toggleStates, "TOGGLER IN 12");
-  
 
   useEffect(() => {
     const fetchData = async () => {
@@ -92,37 +91,122 @@ const JuegoDeSeleccion = ({toggleStates, setToggleStates}) => {
     const imagenCorrecta = currentGame.imagenCorrecta;
 
     if (selectedImage === imagenCorrecta) {
-      Swal.fire({
-        title: "¡Correcto!",
-        text: "¡Has seleccionado la imagen correcta!",
-        icon: "success",
-        showCancelButton: true,
-        confirmButtonText: "Siguiente",
-        cancelButtonText: "Cerrar",
-        customClass: {
-          popup: "my-popup",
-          title: "my-title",
-          content: "my-content",
-          confirmButton: "my-confirm-button",
-          cancelButton: "my-cancel-button",
-        },
-        preConfirm: () => {
+      if (toggleStates.writtenFeedback && toggleStates.oralFeedback) {
+        // Mostrar Swal y reproducir audio
+        Swal.fire({
+          title: "¡Correcto!",
+          text: "¡Has seleccionado la imagen correcta!",
+          icon: "success",
+          showCancelButton: true,
+          confirmButtonText: "Siguiente",
+          cancelButtonText: "Cerrar",
+          customClass: {
+            popup: "my-popup",
+            title: "my-title",
+            content: "my-content",
+            confirmButton: "my-confirm-button",
+            cancelButton: "my-cancel-button",
+          },
+          preConfirm: () => {
+            handleNextGame();
+          },
+        });
+        const audio = new Audio(Correcto);
+        audio.play();
+      } else if (toggleStates.writtenFeedback) {
+        // Mostrar Swal
+        Swal.fire({
+          title: "¡Correcto!",
+          text: "¡Has seleccionado la imagen correcta!",
+          icon: "success",
+          showCancelButton: true,
+          confirmButtonText: "Siguiente",
+          cancelButtonText: "Cerrar",
+          customClass: {
+            popup: "my-popup",
+            title: "my-title",
+            content: "my-content",
+            confirmButton: "my-confirm-button",
+            cancelButton: "my-cancel-button",
+          },
+          preConfirm: () => {
+            handleNextGame();
+          },
+        });
+      } else if (toggleStates.oralFeedback) {
+        const audio = new Audio(Correcto);
+        audio.play();
+        setTimeout(() => {
           handleNextGame();
-        },
-      });
+        }, 1200);
+      } else {
+        // Mostrar Swal
+        Swal.fire({
+          title: "¡Correcto!",
+          text: "¡Has seleccionado la imagen correcta!",
+          icon: "success",
+          showCancelButton: true,
+          confirmButtonText: "Siguiente",
+          cancelButtonText: "Cerrar",
+          customClass: {
+            popup: "my-popup",
+            title: "my-title",
+            content: "my-content",
+            confirmButton: "my-confirm-button",
+            cancelButton: "my-cancel-button",
+          },
+          preConfirm: () => {
+            handleNextGame();
+          },
+        });
+      }
     } else {
-      Swal.fire({
-        title: "Incorrecto",
-        text: "¡Has seleccionado la imagen incorrecta!",
-        icon: "error",
-        customClass: {
-          popup: "my-popup",
-          title: "my-title",
-          content: "my-content",
-          confirmButton: "my-confirm-button",
-          cancelButton: "my-cancel-button",
-        },
-      });
+      if (toggleStates.writtenFeedback && toggleStates.oralFeedback) {
+        Swal.fire({
+          title: "Incorrecto",
+          text: "¡Has seleccionado la imagen incorrecta!",
+          icon: "error",
+          customClass: {
+            popup: "my-popup",
+            title: "my-title",
+            content: "my-content",
+            confirmButton: "my-confirm-button",
+            cancelButton: "my-cancel-button",
+          },
+        });
+        const audio = new Audio(Incorrecto);
+        audio.play();
+      } else if (toggleStates.writtenFeedback) {
+        Swal.fire({
+          title: "Incorrecto",
+          text: "¡Has seleccionado la imagen incorrecta!",
+          icon: "error",
+          customClass: {
+            popup: "my-popup",
+            title: "my-title",
+            content: "my-content",
+            confirmButton: "my-confirm-button",
+            cancelButton: "my-cancel-button",
+          },
+        });
+      } else if (toggleStates.oralFeedback) {
+        console.log("Reproduciendo audio");
+        const audio = new Audio(Incorrecto);
+        audio.play();
+      } else {
+        Swal.fire({
+          title: "Incorrecto",
+          text: "¡Has seleccionado la imagen incorrecta!",
+          icon: "error",
+          customClass: {
+            popup: "my-popup",
+            title: "my-title",
+            content: "my-content",
+            confirmButton: "my-confirm-button",
+            cancelButton: "my-cancel-button",
+          },
+        });
+      }
     }
   };
 
