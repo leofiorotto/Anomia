@@ -7,10 +7,10 @@ import { Home } from "@styled-icons/boxicons-regular/Home";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
-const UnoSobra = () => {
+const UnoSobra = ({ toggleStates, setToggleStates }) => {
   const [juegos, setJuegos] = useState([]);
   const [currentGameIndex, setCurrentGameIndex] = useState(0);
-  const [showImg1, setShowImg1] = useState(true); // Nuevo estado para controlar si mostrar img2
+  const [showImg1, setShowImg1] = useState(true);
   const [showImg2, setShowImg2] = useState(true);
   const [showImg3, setShowImg3] = useState(true);
   const [showImg4, setShowImg4] = useState(true);

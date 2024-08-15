@@ -5,7 +5,7 @@ import ChooseImg from "./ChooseImg";
 import ChooseWord from "./ChooseWord";
 import { Link } from "react-router-dom"; // Importa Link desde react-router-dom
 
-const EmparejarSonido = () => {
+const EmparejarSonido = ({toggleStates, setToggleStates}) => {
   return (
     <div className="wrapper">
       <h1 className="tittle">¿Que deseas?</h1>

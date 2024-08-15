@@ -19,7 +19,7 @@ import { ArrowCircleLeft } from "@styled-icons/evaicons-solid/ArrowCircleLeft";
 import { HelpCircle } from "@styled-icons/boxicons-solid/HelpCircle";
 import { Home } from "@styled-icons/boxicons-regular/Home";
 
-const JuegoDeSeleccion = () => {
+const JuegoDeSeleccion = ({ toggleStates, setToggleStates}) => {
   const [juegos, setJuegos] = useState([]);
   const [currentGameIndex, setCurrentGameIndex] = useState(0);
   const [showWord1, setShowWord1] = useState(true);

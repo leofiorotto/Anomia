@@ -7,7 +7,7 @@ import { Home } from "@styled-icons/boxicons-regular/Home";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
-const PalabraAislada = () => {
+const PalabraAislada = ({toggleStates, setToggleStates}) => {
   const [juegos, setJuegos] = useState([]);
   const [currentGameIndex, setCurrentGameIndex] = useState(0);
   const [showWord1, setShowWord1] = useState(true);

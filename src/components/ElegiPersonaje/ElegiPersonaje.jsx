@@ -2,17 +2,21 @@ import React, { useState, useEffect } from "react";
 import "./ElegiPersonaje.css";
 import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
-import { CirclePlay } from "@styled-icons/fa-regular/CirclePlay";
 import { ArrowCircleRight } from "@styled-icons/evaicons-solid/ArrowCircleRight";
 import { ArrowCircleLeft } from "@styled-icons/evaicons-solid/ArrowCircleLeft";
 import { HelpCircle } from "@styled-icons/boxicons-solid/HelpCircle";
 import { Home } from "@styled-icons/boxicons-regular/Home";
+import Correcto from "../../assets/sound/correcto.mp3";
+import Incorrecto from "../../assets/sound/incorrecto.mp3";
 
-const JuegoDeSeleccion = () => {
+const JuegoDeSeleccion = ({toggleStates, setToggleStates}) => {
   const [juegos, setJuegos] = useState([]);
   const [currentGameIndex, setCurrentGameIndex] = useState(0);
   const [showImg2, setShowImg2] = useState(true); // Nuevo estado para controlar si mostrar img2
   const [showImg1, setShowImg1] = useState(true);
+
+  console.log(toggleStates, "TOGGLER IN 12");
+  
 
   useEffect(() => {
     const fetchData = async () => {

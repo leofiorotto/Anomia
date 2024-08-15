@@ -1,17 +1,32 @@
-import React from 'react'
-import Item from '../Item/Item';
-import "./ItemList.css"
+import React, { useState } from "react";
+import Item from "../Item/Item";
+import "./ItemList.css";
+import { SettingsOutline } from "@styled-icons/evaicons-outline/SettingsOutline";
+import SettingsModal from "./components/modal";
 
+const ItemList = ({ products, toggleStates, setToggleStates }) => {
+  const [isOpen, setIsOpen] = useState(false);
 
-const ItemList = ({ products }) => {
-    return (
-      <div className="ItemList">
-        {products.map((prod) =>  <Item key={prod.id} {...prod} />)}
-        
+  return (
+    <>
+      <div className="settings" onClick={() => setIsOpen(true)}>
+        <SettingsOutline size={32} />
+        {isOpen && (
+          <SettingsModal
+            isOpen={isOpen}
+            setIsOpen={setIsOpen}
+            toggleStates={toggleStates}
+            setToggleStates={setToggleStates}
+          />
+        )}
       </div>
-      
-      
-    )
-  }
+      <div className="ItemList">
+        {products.map((prod) => (
+          <Item key={prod.id} {...prod} toggleStates={toggleStates} />
+        ))}
+      </div>
+    </>
+  );
+};
 
-export default ItemList
+export default ItemList;

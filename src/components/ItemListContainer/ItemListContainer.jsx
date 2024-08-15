@@ -5,7 +5,7 @@ import "./ItemListContainer.css"
 import { useParams } from "react-router-dom"
 
 
-const ItemListContainer = ({greeting}) => {
+const ItemListContainer = ({greeting, toggleStates, setToggleStates}) => {
 
     const [products, setProducts] = useState([])
 
@@ -26,7 +26,7 @@ const ItemListContainer = ({greeting}) => {
 
     return (
         <div className="ItemListContainer">
-            <ItemList products={products} />
+            <ItemList products={products} toggleStates={toggleStates} setToggleStates={setToggleStates}  />
             
         </div>
     )
