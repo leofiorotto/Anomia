@@ -48,9 +48,9 @@ const SettingsModal = ({
                       onClick={() => handleToggle("oralHelp")}
                     >
                       {toggleStates.oralHelp ? (
-                        <ToggleOn size={35} />
+                        <ToggleOn size={45} color="green" />
                       ) : (
-                        <ToggleOff size={35} />
+                        <ToggleOff size={45} color="black" />
                       )}
                     </div>
                   </div>
@@ -63,9 +63,9 @@ const SettingsModal = ({
                       onClick={() => handleToggle("writtenHelp")}
                     >
                       {toggleStates.writtenHelp ? (
-                        <ToggleOn size={35} />
+                        <ToggleOn size={45} color="green" />
                       ) : (
-                        <ToggleOff size={35} />
+                        <ToggleOff size={45} color="black" />
                       )}
                     </div>
                   </div>
@@ -85,9 +85,9 @@ const SettingsModal = ({
                       onClick={() => handleToggle("oralFeedback")}
                     >
                       {toggleStates.oralFeedback ? (
-                        <ToggleOn size={35} />
+                        <ToggleOn size={45} color="green" />
                       ) : (
-                        <ToggleOff size={35} />
+                        <ToggleOff size={45} color="black" />
                       )}
                     </div>
                   </div>
@@ -100,9 +100,9 @@ const SettingsModal = ({
                       onClick={() => handleToggle("writtenFeedback")}
                     >
                       {toggleStates.writtenFeedback ? (
-                        <ToggleOn size={35} />
+                        <ToggleOn size={45} color="green" />
                       ) : (
-                        <ToggleOff size={35} />
+                        <ToggleOff size={45} color="black" />
                       )}
                     </div>
                   </div>

@@ -3,7 +3,7 @@ import "./EmparejarSonido.css";
 import Volume from "../../assets/volume.svg";
 import ChooseImg from "./ChooseImg";
 import ChooseWord from "./ChooseWord";
-import { Link } from "react-router-dom"; // Importa Link desde react-router-dom
+import { Link } from "react-router-dom";
 
 const EmparejarSonido = ({toggleStates, setToggleStates}) => {
   return (

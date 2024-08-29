@@ -12,7 +12,7 @@ import Incorrecto from "../../assets/sound/incorrecto.mp3";
 const JuegoDeSeleccion = ({ toggleStates, setToggleStates }) => {
   const [juegos, setJuegos] = useState([]);
   const [currentGameIndex, setCurrentGameIndex] = useState(0);
-  const [showImg2, setShowImg2] = useState(true); // Nuevo estado para controlar si mostrar img2
+  const [showImg2, setShowImg2] = useState(true);
   const [showImg1, setShowImg1] = useState(true);
 
   console.log(toggleStates, "TOGGLER IN 12");
@@ -39,7 +39,6 @@ const JuegoDeSeleccion = ({ toggleStates, setToggleStates }) => {
     if (currentGameIndex < juegos.length - 1) {
       setCurrentGameIndex(currentGameIndex + 1);
     } else {
-      // Has llegado al final de los juegos, puedes manejar esto como desees
       Swal.fire({
         title: "Juego terminado",
         text: "¡Has completado todos los niveles!",
@@ -79,9 +78,9 @@ const JuegoDeSeleccion = ({ toggleStates, setToggleStates }) => {
     const imagenCorrecta = currentGame.imagenCorrecta;
 
     if (imagenCorrecta === 1) {
-      setShowImg2(false); // Si la imagen correcta es la 1, oculta la imagen 2
+      setShowImg2(false);
     } else if (imagenCorrecta === 2) {
-      setShowImg1(false); // Si la imagen correcta es la 2, oculta la imagen 1
+      setShowImg1(false); 
     }
   };
   const currentGame = juegos[currentGameIndex];

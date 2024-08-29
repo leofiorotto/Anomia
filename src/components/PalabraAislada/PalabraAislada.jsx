@@ -6,8 +6,10 @@ import { HelpCircle } from "@styled-icons/boxicons-solid/HelpCircle";
 import { Home } from "@styled-icons/boxicons-regular/Home";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import CorrectSound from "../../assets/sound/correcto.mp3";
+import IncorrectSound from "../../assets/sound/incorrecto.mp3";
 
-const PalabraAislada = ({toggleStates, setToggleStates}) => {
+const PalabraAislada = ({ toggleStates, setToggleStates }) => {
   const [juegos, setJuegos] = useState([]);
   const [currentGameIndex, setCurrentGameIndex] = useState(0);
   const [showWord1, setShowWord1] = useState(true);
@@ -125,13 +127,20 @@ const PalabraAislada = ({toggleStates, setToggleStates}) => {
     console.log("selectedWordIndex:", selectedWordIndex);
     console.log("palabraCorrecta:", palabraCorrecta);
 
-    if (selectedWordIndex == palabraCorrecta) {
+    const playFeedbackAudio = (isCorrect) => {
+      const audio = new Audio(isCorrect ? CorrectSound : IncorrectSound);
+      audio.play();
+    };
+
+    const showFeedbackModal = (isCorrect) => {
       Swal.fire({
-        title: "¡Correcto!",
-        text: "¡Has seleccionado la palabra correcta!",
-        icon: "success",
-        showCancelButton: true,
-        confirmButtonText: "Siguiente",
+        title: isCorrect ? "¡Correcto!" : "Incorrecto",
+        text: isCorrect
+          ? "¡Has seleccionado la palabra correcta!"
+          : "¡Has seleccionado la palabra incorrecta!",
+        icon: isCorrect ? "success" : "error",
+        showCancelButton: isCorrect,
+        confirmButtonText: isCorrect ? "Siguiente" : "Cerrar",
         cancelButtonText: "Cerrar",
         customClass: {
           popup: "my-popup",
@@ -140,23 +149,19 @@ const PalabraAislada = ({toggleStates, setToggleStates}) => {
           confirmButton: "my-confirm-button",
           cancelButton: "my-cancel-button",
         },
-        preConfirm: () => {
-          handleNextGame();
-        },
+        preConfirm: isCorrect ? handleNextGame : null,
       });
+    };
+
+    const isCorrect = selectedWordIndex == palabraCorrecta;
+
+    if (toggleStates.oralFeedback && toggleStates.writtenFeedback) {
+      playFeedbackAudio(isCorrect);
+      showFeedbackModal(isCorrect);
+    } else if (toggleStates.oralFeedback) {
+      playFeedbackAudio(isCorrect);
     } else {
-      Swal.fire({
-        title: "Incorrecto",
-        text: "¡Has seleccionado la palabra incorrecta!",
-        icon: "error",
-        customClass: {
-          popup: "my-popup",
-          title: "my-title",
-          content: "my-content",
-          confirmButton: "my-confirm-button",
-          cancelButton: "my-cancel-button",
-        },
-      });
+      showFeedbackModal(isCorrect);
     }
   };
 

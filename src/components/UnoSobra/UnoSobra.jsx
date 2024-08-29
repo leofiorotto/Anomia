@@ -6,6 +6,8 @@ import { HelpCircle } from "@styled-icons/boxicons-solid/HelpCircle";
 import { Home } from "@styled-icons/boxicons-regular/Home";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import CorrectSound from "../../assets/sound/correcto.mp3";
+import IncorrectSound from "../../assets/sound/incorrecto.mp3";
 
 const UnoSobra = ({ toggleStates, setToggleStates }) => {
   const [juegos, setJuegos] = useState([]);
@@ -86,25 +88,26 @@ const UnoSobra = ({ toggleStates, setToggleStates }) => {
     setShowImg3(true);
     setShowImg4(true);
   };
+
   const handleRemoveImage = () => {
     const currentGame = juegos[currentGameIndex];
     const imagenCorrecta = currentGame.imagenCorrecta;
-    if (imagenCorrecta == 1) {
+    if (imagenCorrecta === 1) {
       setShowImg2(false);
     } else {
       setShowImg1(false);
     }
-    if (imagenCorrecta == 2) {
+    if (imagenCorrecta === 2) {
       setShowImg1(false);
     } else {
       setShowImg2(false);
     }
-    if (imagenCorrecta == 3) {
+    if (imagenCorrecta === 3) {
       setShowImg4(false);
     } else {
       setShowImg3(false);
     }
-    if (imagenCorrecta == 4) {
+    if (imagenCorrecta === 4) {
       setShowImg3(false);
     } else {
       setShowImg4(false);
@@ -115,17 +118,20 @@ const UnoSobra = ({ toggleStates, setToggleStates }) => {
     const currentGame = juegos[currentGameIndex];
     const imagenCorrecta = currentGame.imagenCorrecta;
 
-    console.log("selectedImgIndex:", selectedImgIndex);
-    console.log("imagenCorrecta:", imagenCorrecta);
+    const playFeedbackAudio = (isCorrect) => {
+      const audio = new Audio(isCorrect ? CorrectSound : IncorrectSound);
+      audio.play();
+    };
 
-    if (selectedImgIndex == imagenCorrecta) {
-      console.log("¡Has seleccionado la imagen correcta!");
+    const showFeedbackModal = (isCorrect) => {
       Swal.fire({
-        title: "¡Correcto!",
-        text: "¡Has seleccionado la imagen correcta!",
-        icon: "success",
-        showCancelButton: true,
-        confirmButtonText: "Siguiente",
+        title: isCorrect ? "¡Correcto!" : "Incorrecto",
+        text: isCorrect
+          ? "¡Has seleccionado la imagen correcta!"
+          : "¡Has seleccionado la imagen incorrecta!",
+        icon: isCorrect ? "success" : "error",
+        showCancelButton: isCorrect,
+        confirmButtonText: isCorrect ? "Siguiente" : "Cerrar",
         cancelButtonText: "Cerrar",
         customClass: {
           popup: "my-popup",
@@ -134,23 +140,19 @@ const UnoSobra = ({ toggleStates, setToggleStates }) => {
           confirmButton: "my-confirm-button",
           cancelButton: "my-cancel-button",
         },
-        preConfirm: () => {
-          handleNextGame();
-        },
+        preConfirm: isCorrect ? handleNextGame : null,
       });
+    };
+
+    const isCorrect = selectedImgIndex == imagenCorrecta;
+
+    if (toggleStates.oralFeedback && toggleStates.writtenFeedback) {
+      playFeedbackAudio(isCorrect);
+      showFeedbackModal(isCorrect);
+    } else if (toggleStates.oralFeedback) {
+      playFeedbackAudio(isCorrect);
     } else {
-      Swal.fire({
-        title: "Incorrecto",
-        text: "¡Has seleccionado la imagen incorrecta!",
-        icon: "error",
-        customClass: {
-          popup: "my-popup",
-          title: "my-title",
-          content: "my-content",
-          confirmButton: "my-confirm-button",
-          cancelButton: "my-cancel-button",
-        },
-      });
+      showFeedbackModal(isCorrect);
     }
   };
 
@@ -169,11 +171,7 @@ const UnoSobra = ({ toggleStates, setToggleStates }) => {
             {showImg1 && (
               <img
                 src={currentGame.img1}
-                className={
-                  showImg1
-                    ? "img-container-2 slide-out-left"
-                    : "img-container-2"
-                }
+                className="img-container-2"
                 alt="Imagen 1"
                 onClick={() => handleImageClick(1)}
               />
@@ -181,11 +179,7 @@ const UnoSobra = ({ toggleStates, setToggleStates }) => {
             {showImg2 && (
               <img
                 src={currentGame.img2}
-                className={
-                  showImg2
-                    ? "img-container-2 slide-out-left"
-                    : "img-container-2"
-                }
+                className="img-container-2"
                 alt="Imagen 2"
                 onClick={() => handleImageClick(2)}
               />
@@ -193,11 +187,7 @@ const UnoSobra = ({ toggleStates, setToggleStates }) => {
             {showImg3 && (
               <img
                 src={currentGame.img3}
-                className={
-                  showImg3
-                    ? "img-container-2 slide-out-left"
-                    : "img-container-2"
-                }
+                className="img-container-2"
                 alt="Imagen 3"
                 onClick={() => handleImageClick(3)}
               />
@@ -205,11 +195,7 @@ const UnoSobra = ({ toggleStates, setToggleStates }) => {
             {showImg4 && (
               <img
                 src={currentGame.img4}
-                className={
-                  showImg4
-                    ? "img-container-2 slide-out-left"
-                    : "img-container-2"
-                }
+                className="img-container-2"
                 alt="Imagen 4"
                 onClick={() => handleImageClick(4)}
               />

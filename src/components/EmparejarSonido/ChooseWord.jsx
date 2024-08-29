@@ -13,13 +13,15 @@ import Aire from "../../assets/sound/aire.mp3";
 import Amaca from "../../assets/sound/amaca.mp3";
 import Copa from "../../assets/sound/copa.mp3";
 import Chocolate from "../../assets/sound/chocolate.mp3";
+import CorrectSound from "../../assets/sound/correcto.mp3";
+import IncorrectSound from "../../assets/sound/incorrecto.mp3";
 import { CirclePlay } from "@styled-icons/fa-regular/CirclePlay";
 import { ArrowCircleRight } from "@styled-icons/evaicons-solid/ArrowCircleRight";
 import { ArrowCircleLeft } from "@styled-icons/evaicons-solid/ArrowCircleLeft";
 import { HelpCircle } from "@styled-icons/boxicons-solid/HelpCircle";
 import { Home } from "@styled-icons/boxicons-regular/Home";
 
-const JuegoDeSeleccion = ({ toggleStates, setToggleStates}) => {
+const JuegoDeSeleccion = ({ toggleStates, setToggleStates }) => {
   const [juegos, setJuegos] = useState([]);
   const [currentGameIndex, setCurrentGameIndex] = useState(0);
   const [showWord1, setShowWord1] = useState(true);
@@ -169,13 +171,22 @@ const JuegoDeSeleccion = ({ toggleStates, setToggleStates}) => {
     console.log("selectedWordIndex:", selectedWordIndex);
     console.log("palabraCorrecta:", palabraCorrecta);
 
-    if (selectedWordIndex === palabraCorrecta) {
+    const isCorrect = selectedWordIndex === palabraCorrecta;
+
+    if (toggleStates.oralFeedback) {
+      const audio = new Audio(isCorrect ? CorrectSound : IncorrectSound);
+      audio.play();
+    }
+
+    if (toggleStates.writtenFeedback || !toggleStates.oralFeedback) {
       Swal.fire({
-        title: "¡Correcto!",
-        text: "¡Has seleccionado la palabra correcta!",
-        icon: "success",
-        showCancelButton: true,
-        confirmButtonText: "Siguiente",
+        title: isCorrect ? "¡Correcto!" : "Incorrecto",
+        text: isCorrect
+          ? "¡Has seleccionado la palabra correcta!"
+          : "¡Has seleccionado la palabra incorrecta!",
+        icon: isCorrect ? "success" : "error",
+        showCancelButton: isCorrect,
+        confirmButtonText: isCorrect ? "Siguiente" : "Cerrar",
         cancelButtonText: "Cerrar",
         customClass: {
           popup: "my-popup",
@@ -185,22 +196,13 @@ const JuegoDeSeleccion = ({ toggleStates, setToggleStates}) => {
           cancelButton: "my-cancel-button",
         },
         preConfirm: () => {
-          handleNextGame();
+          if (isCorrect) {
+            handleNextGame();
+          }
         },
       });
-    } else {
-      Swal.fire({
-        title: "Incorrecto",
-        text: "¡Has seleccionado la palabra incorrecta!",
-        icon: "error",
-        customClass: {
-          popup: "my-popup",
-          title: "my-title",
-          content: "my-content",
-          confirmButton: "my-confirm-button",
-          cancelButton: "my-cancel-button",
-        },
-      });
+    } else if (isCorrect) {
+      handleNextGame();
     }
   };
 

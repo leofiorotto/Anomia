@@ -7,11 +7,13 @@ import { ArrowCircleRight } from "@styled-icons/evaicons-solid/ArrowCircleRight"
 import { ArrowCircleLeft } from "@styled-icons/evaicons-solid/ArrowCircleLeft";
 import { HelpCircle } from "@styled-icons/boxicons-solid/HelpCircle";
 import { Home } from "@styled-icons/boxicons-regular/Home";
+import CorrectSound from "../../assets/sound/correcto.mp3";
+import IncorrectSound from "../../assets/sound/incorrecto.mp3";
 
-const JuegoDeSeleccion = ({ toggleStates, setToggleStates}) => {
+const JuegoDeSeleccion = ({ toggleStates, setToggleStates }) => {
   const [juegos, setJuegos] = useState([]);
   const [currentGameIndex, setCurrentGameIndex] = useState(0);
-  const [showImg2, setShowImg2] = useState(true); // Nuevo estado para controlar si mostrar img2
+  const [showImg2, setShowImg2] = useState(true);
   const [showImg1, setShowImg1] = useState(true);
 
   useEffect(() => {
@@ -36,7 +38,6 @@ const JuegoDeSeleccion = ({ toggleStates, setToggleStates}) => {
     if (currentGameIndex < juegos.length - 1) {
       setCurrentGameIndex(currentGameIndex + 1);
     } else {
-      // Has llegado al final de los juegos, puedes manejar esto como desees
       Swal.fire({
         title: "Juego terminado",
         text: "¡Has completado todos los niveles!",
@@ -51,16 +52,8 @@ const JuegoDeSeleccion = ({ toggleStates, setToggleStates}) => {
       });
     }
 
-    if (setShowImg2 === true) {
-      setShowImg2(false);
-    } else {
-      setShowImg2(true);
-    }
-    if (setShowImg1 === true) {
-      setShowImg1(false);
-    } else {
-      setShowImg1(true);
-    }
+    setShowImg1(true);
+    setShowImg2(true);
   };
 
   const handleBackGame = () => {
@@ -68,11 +61,8 @@ const JuegoDeSeleccion = ({ toggleStates, setToggleStates}) => {
       setCurrentGameIndex(currentGameIndex - 1);
     }
 
-    if (setShowImg2 === true) {
-      setShowImg2(false);
-    } else {
-      setShowImg2(true);
-    }
+    setShowImg1(true);
+    setShowImg2(true);
   };
 
   const handleRemoveImage = () => {
@@ -80,51 +70,55 @@ const JuegoDeSeleccion = ({ toggleStates, setToggleStates}) => {
     const imagenCorrecta = currentGame.imagenCorrecta;
 
     if (imagenCorrecta === 1) {
-      setShowImg2(false); // Si la imagen correcta es la 1, oculta la imagen 2
+      setShowImg2(false);
     } else if (imagenCorrecta === 2) {
-      setShowImg1(false); // Si la imagen correcta es la 2, oculta la imagen 1
+      setShowImg1(false);
     }
   };
-  const currentGame = juegos[currentGameIndex];
+
+  const playFeedbackAudio = (isCorrect) => {
+    const audio = new Audio(isCorrect ? CorrectSound : IncorrectSound);
+    audio.play();
+  };
+
+  const showFeedbackModal = (isCorrect) => {
+    Swal.fire({
+      title: isCorrect ? "¡Correcto!" : "Incorrecto",
+      text: isCorrect
+        ? "¡Has seleccionado la imagen correcta!"
+        : "¡Has seleccionado la imagen incorrecta!",
+      icon: isCorrect ? "success" : "error",
+      showCancelButton: isCorrect,
+      confirmButtonText: isCorrect ? "Siguiente" : "Cerrar",
+      cancelButtonText: "Cerrar",
+      customClass: {
+        popup: "my-popup",
+        title: "my-title",
+        content: "my-content",
+        confirmButton: "my-confirm-button",
+        cancelButton: "my-cancel-button",
+      },
+      preConfirm: isCorrect ? handleNextGame : null,
+    });
+  };
 
   const handleImageClick = (selectedImage) => {
     const currentGame = juegos[currentGameIndex];
     const imagenCorrecta = currentGame.imagenCorrecta;
 
-    if (selectedImage === imagenCorrecta) {
-      Swal.fire({
-        title: "¡Correcto!",
-        text: "¡Has seleccionado la imagen correcta!",
-        icon: "success",
-        showCancelButton: true,
-        confirmButtonText: "Siguiente",
-        cancelButtonText: "Cerrar",
-        customClass: {
-          popup: "my-popup",
-          title: "my-title",
-          content: "my-content",
-          confirmButton: "my-confirm-button",
-          cancelButton: "my-cancel-button",
-        },
-        preConfirm: () => {
-          handleNextGame();
-        },
-      });
+    const isCorrect = selectedImage === imagenCorrecta;
+
+    if (toggleStates.oralFeedback && toggleStates.writtenFeedback) {
+      playFeedbackAudio(isCorrect);
+      showFeedbackModal(isCorrect);
+    } else if (toggleStates.oralFeedback) {
+      playFeedbackAudio(isCorrect);
     } else {
-      Swal.fire({
-        title: "Incorrecto",
-        text: "¡Has seleccionado la imagen incorrecta!",
-        icon: "error",
-        customClass: {
-          popup: "my-popup",
-          title: "my-title",
-          content: "my-content",
-          confirmButton: "my-confirm-button",
-          cancelButton: "my-cancel-button",
-        },
-      });
+      showFeedbackModal(isCorrect);
     }
   };
+
+  const currentGame = juegos[currentGameIndex];
 
   return (
     <div className="container">

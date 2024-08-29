@@ -13,6 +13,8 @@ import Dentifrico from "../../assets/sound/dentifrico.mp3";
 import Chamame from "../../assets/sound/chamame.mp3";
 import Computadora from "../../assets/sound/computadora.mp3";
 import Pelicula from "../../assets/sound/pelicula.mp3";
+import CorrectSound from "../../assets/sound/correcto.mp3";
+import IncorrectSound from "../../assets/sound/incorrecto.mp3";
 import "./Choose.css";
 import { CirclePlay } from "@styled-icons/fa-regular/CirclePlay";
 import { ArrowCircleRight } from "@styled-icons/evaicons-solid/ArrowCircleRight";
@@ -20,7 +22,7 @@ import { ArrowCircleLeft } from "@styled-icons/evaicons-solid/ArrowCircleLeft";
 import { HelpCircle } from "@styled-icons/boxicons-solid/HelpCircle";
 import { Home } from "@styled-icons/boxicons-regular/Home";
 
-const JuegoDeSeleccion = ({ toggleStates, setToggleStates}) => {
+const JuegoDeSeleccion = ({ toggleStates, setToggleStates }) => {
   const PathSound = "../../assets/sound";
   const [juegos, setJuegos] = useState([]);
   const [currentGameIndex, setCurrentGameIndex] = useState(0);
@@ -166,13 +168,20 @@ const JuegoDeSeleccion = ({ toggleStates, setToggleStates}) => {
     console.log("selectedWordIndex:", selectedWordIndex);
     console.log("palabraCorrecta:", palabraCorrecta);
 
-    if (selectedWordIndex === palabraCorrecta) {
+    const playFeedbackAudio = (isCorrect) => {
+      const audio = new Audio(isCorrect ? CorrectSound : IncorrectSound);
+      audio.play();
+    };
+
+    const showFeedbackModal = (isCorrect) => {
       Swal.fire({
-        title: "¡Correcto!",
-        text: "¡Has seleccionado la palabra correcta!",
-        icon: "success",
-        showCancelButton: true,
-        confirmButtonText: "Siguiente",
+        title: isCorrect ? "¡Correcto!" : "Incorrecto",
+        text: isCorrect
+          ? "¡Has seleccionado la palabra correcta!"
+          : "¡Has seleccionado la palabra incorrecta!",
+        icon: isCorrect ? "success" : "error",
+        showCancelButton: isCorrect,
+        confirmButtonText: isCorrect ? "Siguiente" : "Cerrar",
         cancelButtonText: "Cerrar",
         customClass: {
           popup: "my-popup",
@@ -181,23 +190,19 @@ const JuegoDeSeleccion = ({ toggleStates, setToggleStates}) => {
           confirmButton: "my-confirm-button",
           cancelButton: "my-cancel-button",
         },
-        preConfirm: () => {
-          handleNextGame();
-        },
+        preConfirm: isCorrect ? handleNextGame : null,
       });
+    };
+
+    const isCorrect = selectedWordIndex === palabraCorrecta;
+
+    if (toggleStates.oralFeedback && toggleStates.writtenFeedback) {
+      playFeedbackAudio(isCorrect);
+      showFeedbackModal(isCorrect);
+    } else if (toggleStates.oralFeedback) {
+      playFeedbackAudio(isCorrect);
     } else {
-      Swal.fire({
-        title: "Incorrecto",
-        text: "¡Has seleccionado la palabra incorrecta!",
-        icon: "error",
-        customClass: {
-          popup: "my-popup",
-          title: "my-title",
-          content: "my-content",
-          confirmButton: "my-confirm-button",
-          cancelButton: "my-cancel-button",
-        },
-      });
+      showFeedbackModal(isCorrect);
     }
   };
 
